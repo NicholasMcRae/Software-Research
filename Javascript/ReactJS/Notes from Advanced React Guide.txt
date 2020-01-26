@@ -1,0 +1,41 @@
+Accessibility
+*************
+- React fully supports building accessible websites, often by using standard HTML techniques
+
+Code Splitting
+**************
+- Most React apps will have their files bundled using tools like Webpack or Browserify
+- Process of following imported files and merging them into a single file: a 'bundle'
+
+Context
+*******
+- provides a way to pass data through the componenet tree without having to pass props down manually at every level
+- designed to share data that can be considered global for a tree of React components, such as current authenticated user
+- apply it sparingly because it makes component reuse more difficult
+- component composition is often a simpler solution than context
+
+Error Boundaries
+****************
+- in this past, JavaScript errors inside componenets used to corrupt React's internal state
+- React did not provide a way to handle them gracefully in components, and oculd not recover from them
+- Error boundaries are react componenets that catch JS errors anywhere in their child componenet tree, log those errors, and display a fallback UI
+
+Forwarding Refs
+***************
+- automatically passing a ref through a component to one of its children
+- typically not necessary for most components in the application
+- the most common scenarios are described below
+
+Fragments
+*********
+- fragments let you group a list of children without adding extra nodes to the dom
+
+Higher-Order Components
+***********************
+- they are a pattern that emerges from React's compositional nature
+- a higher-order component is a function that takes a component and returns a new component
+- HOCs are common in third-party react libraries such as redux's connect nad relay's createFragmentContainer
+
+Integrating with Other Libraries
+********************************
+- this guide will examine some of the more common use cases, focusing on integration with jQuery and Backbone

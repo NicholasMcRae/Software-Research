@@ -1,0 +1,167 @@
+Functions
+- The first rule of functions is that they should be small
+- They should do one thing, do it well
+- keep the interior of each function at a single level of abstraction
+- Single Responsibility Principle - more than one reason for it to change
+- Switch Statements
+	- we can't always avoid switch statements
+	- can make sure switch statements are buried in a low-level class and not repeated
+	- do this with polymorphism
+		- Consider a function that might depend on type of employee
+		- Several problems
+			- large
+			- employee is added, it will grow
+			- does more than one thing
+			- violates single responsibility principle - more than one reason for it to change
+			- worst problem is that there are an unlimited number of other functions that will have the same structure
+				- all will have the same structure
+		- solution: bury the switch statement in the basement of an abstract factory and never let anyone see it
+		- the factory will use the switch statement to create appropriate instances of the derivatives of Employee
+		- various functions, such as calculatePay, isPayDay, and deliverPay will be dispatched polymorphically through the Employee interface
+		- so you're creating an employee factory method which returns instances of subclasses of employee, which are implementations of specific employee types
+	- general rule for switch statements is that they can be tolerated if they appear only once, are used to create polymorphic objects, and are hidden behind an inheritance
+- Function arguments
+	- the ideal number of arguments for a function is zero, next is one, followedby two
+	- three should be avoided where possible
+	- more than three requires very special justification and then shouldn't be used anyway
+		- mainly because it makes testing harder
+	- flag arguments
+		- ugly
+		- passing a boolean in is a truly terrible practice
+	- Triad functions
+		- when a function seems to need more than two or three arguments it is likely that some of those arguments ought to be wrapped into a class of their own
+		- when groups of variables are passed together the way x and y are in the xample they are likely part of a concept that deserves a name of its own
+- Have no side effects
+	- minimize mutability
+- Output arguments
+	- In general output arguments should be avoided
+	- If your function must change the state of something, have it change the state of its owning object
+- Command Query Separation
+	- Functions should either do something or answer something, but not both
+	- Function should change the state of an object or it should return some information about that object
+	- Doing both often leads to confusion
+- Prefer exceptions to returning error codes
+
+Comments
+- the proper use of comments is to compensate for our failure to express ourself in code
+- tendency should be to try to express ourselves in code rather than comments
+- comments create point of maintainability
+- a comment may be used to amplify the importance of something that may otherwise seem inconsequential
+- if you have to write a comment, write a good comment, don't mumble
+
+Formatting
+- Files should be as small as possible
+- Concepts that are close to each other should be kept close to each other
+- variables should be declared as close to their usage as possible
+- instance variables should be declared at the top of the class
+- if one function calls another they should be vertically close, and the caller should be above the callee - gives the program a natural flow
+- conceptual affinity - certain bits of code want to be near other bits, they have a certain conceptual affinity
+- we want function call dependencies to point in the downward direction. Most important concepts to come first
+- lines should be short
+- we want horizontal white space to associate things that are strongly related, and  disassociate things that are more weakly related
+
+Objects and Data Structures
+- hiding implementation is not just a matter of putting a layer of functions between the variables, it's about abstraction. A class does not simple push its variables out through getters and setters. Rather it exposes interfaces that allow its users to manipulate the essence of the data, without having to know its implementation
+- we don't want to expose the details of our data
+- rather we want to express our data in abstract terms
+- not just done with getters and setters, serious thought needs to be put into the best way to represent the data that an object contains
+- Data/Object Anti-Symmetry
+	- objects hide their data behind abstractions and expose functions that operate on that data
+	- data structures expose their data and have no meaningful functions
+	- Consider what would happen if a perimeter function were added to Geometry
+	- The shape classes would be unaffected
+	- Any other classes that depended on the shapes would also be unaffected
+	- on the other hand, if I add a new shape, I must change all the functions in Geometry to deal with it
+	- Procedural code (code using data structures) makes it easy to add new functions without changing the existing data structures. OO code, on the other hand, makes it easy to add new classes without changing existing functions
+	- In any complex system there are going to be times when we want to add new data types rather than new functions, for these cases objects and OO are most appropriate
+	- On the other hand, there will also be times when we'll want to add new functions as opposed to data types. In that case procedural code and data structures will be more appropriate
+	- Mature programmers know that the idea that everything is an object is a myth. Sometimes you really do want simple data structures with procedures operating on them
+- The Law of Demeter
+	- a module should not know about the innards of the objects it manipulates
+	- As we saw in last section - objects hide their data and expose operations
+	- This means that an object should not expose its internal structure through accessors because to do so is to expose, rather than to hide, its internal structure
+	- More precisely, the Law of Demeter says that a method f of a class C should only call the methods of these:
+	- C
+	- an object created by f
+	- an object passed as an argument to f
+	- an object held in an instance variable of C
+	- the method should not invoke methods on objects that are returned by any of the allowed functions
+	- example
+	- Where the example is a violation of demeter depends on whether or not ctxt, options, and scratchdir are objects or data structures
+	- If they are objects then their internal structure should be hidden rather than exposed
+	- on the other hand, if they are just data structures with no behavior, then they naturally expose their internal structure and so demeter does not apply
+- Hybrids
+	- This confusion sometimes leads to unfortunate hybrid structures that are half object and half data structure
+	- They have functions that do significant things, and they also have either public variables or public accessors and mutators that, for all intents and purposes, make the private variables public
+	- Avoid creating them
+	- They are indicative of a muddled design whose authors are unusure of, or worse, ignorant of, whether they need protection from functions or types
+- Hiding Structure
+	-If ctxt is an object, we should be telling it to do something, we should not be asking it about its internals
+- Data Transfer Objects
+	- The quintessential data structure is a class with public variables and no functions
+	-  This is sometimes called a data transfer object
+	- very useful structures, especially when communicating with databases or parsing messages
+	- beans with getters setters often actually provide no benefit
+	
+Error Handling
+- Error handling is important, but if it obscures logic, it's wrong
+- Use exceptions rather than return codes
+- Write your try-catch-finally statement first
+	- don't tangle concerns
+	- the algorithm fromt he function and the error handling can be separated
+- Use unchecked exceptions
+	- we now know it's clear that checked exceptions aren't necessary for the production of robust software
+- Provide context with exceptions
+	- each exception that you throw hsould provid enough context to determine the source and location of an error
+	- mention the operation that  failed and the type of failure
+- Don't Return Null
+	- with function calls don't return null
+- Don't pass null
+- Conclusion
+	- We can write robust, clean code if we see error handling as a separate concern, something that is viewable independently of our main logic
+	- To the degree that we are able to do that, we can reason about it independently and we can make great strides in the maintainability of our code
+	
+Boundaries
+	- In this chapter we look at practices and techniques to keep the boundaries of our software clean
+	- there is a tension between the provider of an interface and the user of an interface
+	- providers of third party packages and frameworks strive for broad applicability so they can work in many environments and appeal to a wide audience
+	- users on the other hand want an interface that is focused on their particular needs
+	- e.g. passing around a map
+	- Map has a very broad interface with is useful, but can be a liability
+	- our application might build up a map and pass it around
+	- our intention might be that none of the recipients of our Map delete anything in the map, but the map has a clear method which could be used
+	- or maybe our design convention is that only particular type sof objects can be stored in the map, but maps do not reliably constrain the types of objects placed within them
+	- passing an instance of map<sensor> liberally around the system means that there willbe a lot of places to fix if the interface to Map ever changes
+	- you may think such a change to be unlikely but remember that it changed when generics support was added in java 5
+	- a cleaner way to use map
+		- the interface at the bo8undary (map) is hidden
+		- it is able to evolve with very little impact on the rest of the application
+		- the use of generics is no longer a big issue becuase the casting and type management is handled inside the sensors class
+		- the sensors class can enforce design and business rules
+	- not suggesting that every use of map be encapsulated in this form, rather are advising not to pass maps, or any other interface at a boundary, around your system
+	- if you use a bo8undary interface like map keep it inside the class, or close family of classes
+	- **avoid returning it from, or accepting it as an argument to public APIs
+	- Exploring and learning boundaries
+		-it's not our job to test the third party code, but it may be in our best interest to write tests for the third-part code we use
+		- instead of experimenting and trying out the new stuff in our production code we could write some tests to explore our understanding of the third-party code
+		- Jim NEwkirk calls such tests learning tests
+	- Clean boundaries
+		- good software designs accomodate change without huge investments and rework
+		- Code at the boundaries needs clear separation and tests that define expectations
+		- We should avoid letting too much of oru code know about the third party particulars
+		- it's better to depend on something you control than on something you don't control, lest it end up controlling you
+		- We manage third-party boundaries by having very few places in the code that refer to them
+		- we may wrap them as we did with map or we may use an adapter to convert from our perfect interface to the provided interface
+		- either way our ocde speaks to us better
+		
+Unit Tests
+	- The three laws of TDD
+		- You may not write production code untily ou have written a failing unit test
+		- You may not write more of a unit test than is sufficient to fail, and not compiling is failing
+		- you may not write more production code than is sufficient to pass the currently failing test
+	- Want to maintain your tests as well as your production code
+	- if you have maintained unit tests you don't have to worry about writing production code
+	- readability makes a clean test
+	
+Classes
+	-
