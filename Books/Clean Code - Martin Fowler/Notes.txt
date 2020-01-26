@@ -164,4 +164,16 @@ Unit Tests
 	- readability makes a clean test
 	
 Classes
-	-
+	- the first rule of classes is that they should be small
+	- a class should only have one responsibility
+	- cohesion
+		- classes you have a small number of instance variables
+		- each of the methods of a class should manipulate one or more of those variables
+		- in general, the more variables a method manipulates the more cohesive that method is to its class
+		- a class in which each variable is used by each method is maximally cohesive
+		- in gneeral it is neither advisable nor possible to create such maximally cohesive classes
+		- when cohesion is high, it means that the methods and variables of the class are co-dependent and hang together as a logical whole
+	- maintaining cohesion results in many small classes
+	- in a clean system we organize our classes so as to reduce the risk of change
+		- when we want to change a class we have to open it up which introduces risk
+		- we'll need to re-test the class
