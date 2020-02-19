@@ -156,7 +156,7 @@ Boundaries
 		
 Unit Tests
 	- The three laws of TDD
-		- You may not write production code untily ou have written a failing unit test
+		- You may not write production code until you have written a failing unit test
 		- You may not write more of a unit test than is sufficient to fail, and not compiling is failing
 		- you may not write more production code than is sufficient to pass the currently failing test
 	- Want to maintain your tests as well as your production code
@@ -167,13 +167,65 @@ Classes
 	- the first rule of classes is that they should be small
 	- a class should only have one responsibility
 	- cohesion
-		- classes you have a small number of instance variables
+		- classes should have a small number of instance variables
 		- each of the methods of a class should manipulate one or more of those variables
 		- in general, the more variables a method manipulates the more cohesive that method is to its class
 		- a class in which each variable is used by each method is maximally cohesive
-		- in gneeral it is neither advisable nor possible to create such maximally cohesive classes
+		- in general it is neither advisable nor possible to create such maximally cohesive classes
 		- when cohesion is high, it means that the methods and variables of the class are co-dependent and hang together as a logical whole
 	- maintaining cohesion results in many small classes
 	- in a clean system we organize our classes so as to reduce the risk of change
 		- when we want to change a class we have to open it up which introduces risk
 		- we'll need to re-test the class
+		
+Systems
+	- cities work because they have teams of people who manage particular parts of the city - water systems, power systems, traffic, law enforcement, building codes and so forth
+	- cities also workbecause they have evolved appropriate levels of abstraction and modularity that make it possible for individuals and the components they manage to work effectively, even without understanding the big picture
+	- although software teams are often organized like that too, the systems they work on often don't have the same separation of concerns and levels of abstraction
+	- Clean code helps us achieve this at the lower levels of abstraction. In this chapter let us consider how to stay clean at higher levels of abstraction, the system level
+	- Separate constructing a system from using it
+		- software systems should separate the startup process, when the application objects are constructed, and the dependencies are wired together, from the runtime logic that takes over after startup
+		- the startup process is a concern that any application must address
+		-it is the first concern we will examine
+		- separation of concerns is one of the oldest and most important design techniques in our craft
+		- one occurrence of lazy initialization isn't a serious problem, however there are normally many instances of little setup idioms like this in applications. Hence, the global setup strategy is scattered across the application, with little modularity and often significant duplication
+		- if we are diligent about building well-formed and robust systems, we should never let little, convenient idioms lead to modularity breakdown. The startup process of object construction and wiring is no exception
+		- We should modularize this process separately from the normal runtime logic and we should make sure that have have a global, consistent strategy for resolving our major dependencies
+	- Separation of Main
+		- one way to separate construction from use is to move all aspectsof construction to main, or modules called by main
+		- design the rest of the system assuming that all object have been constructed and wired up approrpiately
+		- the flow of controlis easy to follow, the main function builds the objects necessary for the system then passes them to the application, which uses them
+		- means that the application has no knowledge of main or of the construction process, it simply expect that everything has been built properly
+	- Factories
+		- Sometimes we need to make the application responsible for when an object gets created
+		- in this case we can use the abstract factory pattern to give the application control of when to build the (e.g.) lineitems
+		- but keep the details of that construction separate from the application code
+	- Dependency Injection
+		- a powerful mechanism for separating construction from use is dependency injection
+		- inversionof control moves secondary responsibilities from an object to other objects that are dedicated to the purpose, thereby supporting the single responsibility principle
+		- in the context of dependency management, an object should not take responsibility for instantiating dependencies itself
+		- instead it should pass this responsibility to another mechanism, thereby inverting the control
+		- the authoritative mechanism will usually be either the main routine or a special purpose container
+	- Scaling Up
+		- It is a myth that we can get systems 'right the first time'
+		- Instead we should implement only today's stories, then refactor and expand the system to implement new stories tomorrow
+		- this is the essence of iterative and incremental agility
+		- But what about at the system level? Doesn't the system architecture require preplanning? Certainly, it can't grow incrementally from simple to complex,c an it?
+		- 'Software systems are unique compared to physical systems. Their architectures can grow incrementally if wemaintain the proper separation of concerns'
+		- ..loosely coupled components
+		- separating concerns is our main concern in architecture
+	- Various tools in Java for separating concerns
+	- Optimize Decision Making
+		- modularity and separation of concerns make decentralized management and decision making possible
+		- we all know it is best to give responsibilities to the most qualified persons
+		- we often forget that it is also best to postpone decisions until the last possible moment
+		- this isn't lazy or irresponsible, it lets us make informed choices with the best possible information
+		- a premature decision is a decision made with suboptimal knowledge
+		- we will have that much less customer feedback, mental reflection on the project, and experience with our implementation choices if we decide too soon
+		- the agility provided by a POJO system with modularized concerns allows us to make optimal, just-in-time decisions, based on the most recent knowledge. The complexity of these decisions is also reduced
+	- Use standards wisely
+		- Standards make it easier to reuse ideas and components, recruit people with relevant experience, encapsulate good ideas, and wire components together. However, the process of creating standards can sometimes take too long for industry to wait, and some standards lose touch with the real needs of the adopters they are inteded to serve
+	- Systems need domain specific languages
+		- a good dsl minimizes thecommunication gapbetween a domain concept and the code that implements it, just as agile practices optimize the communcations within a team and with the project's stakeholders
+	- whether you are designing systems or individual modules, never forget to use the simplest thing that can possibly work
+		- 
