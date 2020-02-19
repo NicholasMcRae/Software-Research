@@ -228,4 +228,41 @@ Systems
 	- Systems need domain specific languages
 		- a good dsl minimizes thecommunication gapbetween a domain concept and the code that implements it, just as agile practices optimize the communcations within a team and with the project's stakeholders
 	- whether you are designing systems or individual modules, never forget to use the simplest thing that can possibly work
-		- 
+	
+	Emergence
+		- what if there were four simple rules that you could follow that would help you create good designs as you worked
+		- what if these four rules facilitated the emergence of good designs
+		- many of us feel that Kent Beck's four rules of Simple Design are of significant help in creating well-designed software
+		According to Kent, a design is simple if it follows these rules:
+			- runs all the tests
+			- contains no duplication
+			- expresses the intent of the programmer
+			- minimizes the number of classes and methods
+		- Runs all the tests
+			- a design must produce a system that acts as intended
+			- a system that is comprehensively tested and passes all of its tests all of the time is a testable system
+			- systems that aren't testable aren't verifiable
+			- fortunately, making our systems testable pushes us toward a designwhere our classes are small and single purpose
+		- No Duplication
+			- Duplication is the primary enemy of a well-designed system
+			- it represents additional work, additional risk, and additional unnecessary complexity
+			- e.g - as we extract commonality at a very tiny level, we start to recognize violations of SRP. So we might move a newly extracted method to another class. That elevates it's visibility
+			- understanding how to achieve reuse in the small is essential to achieving reuse in the large
+		- Expressive
+			- the majority of the cost of a software project is in long-term maintenance
+			- in order to minimize the potential for defects as we introduce change, it's critical for us to be able to understand what a system does
+			- as systems become more complex, they take more and more time for a developer to understand, and there is an even greater opportunity for a misunderstanding
+			- therefore, code should clearly express the intent of its author
+			- the  clearer the author can make the code, the lesstime others will have to spend understanding it
+			- this will reduce defects and shrink the cost of maintenance
+			- you can express yourself by choosing goodnames
+			- you can also express yourself by keeping your functions and calsses small
+			- Also use standard nomenclature
+			- well written unit tests are also expressive
+		- Minimal Classes and Method
+			- concepts as fundamental as elimination of duplication, expressiveness, and SRP can be takentoo far
+			- in an effort to make our classes and methods small, we might create too many tiny classes and methods. So this rule suggests that we also keep our function and class counts low
+			- high class and method counts are sometimes the result of pointless dogmatism
+			- dogma should be resisted and more pragmatic approach adopted
+			- our goal is to keep our overall system small while we are also keeping our functions and classes small
+			- remember, however, that this rule is the lowest priority of the four rules of simple design
