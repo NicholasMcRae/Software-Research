@@ -20,6 +20,7 @@ Routing **
 **********
 
 Basic Routing and Views
+***********************
 - laravel welcome screen
 - under routes folder
 - when user makes get request - in reponse we're loading a view
@@ -34,6 +35,7 @@ Basic Routing and Views
 - get - loading in a browser
 
 Pass Request Data to Views
+**************************
 - sometimes you'll pass data through the query string
 - can get this data using request helper function, providing key
 - can return string
@@ -50,6 +52,7 @@ Pass Request Data to Views
 - curly brace with exclamation doesn't escape - for example if you're fetching html
 
 Route Wildcards
+***************
 - often you'll need routes that accepts a wildcard
 - sometimes part of route needs to be unique - post in curly braces
 - return a view called posts
@@ -62,3 +65,87 @@ Route Wildcards
 	- updated route for wildcard
 	- make it available on clojure
 	- simulated database
+	
+Routing to Controllers
+**********************
+- for small projects clojure are useful
+- for sizeable projects you'll reach for a controller
+- re-wire route for controller
+	- listen for a post
+	- load controller
+	- need a method on the controller (show)
+- Create controller 
+	- can do it under app, http, controller
+	- create method under controller
+- Another way to do this
+	- geerate - run php artisan from terminal
+	- make:controller
+	
+*****************
+Database Access *
+*****************
+
+Setup a Database Connection
+***************************
+- in former example using simple array
+- although you would surely be using database
+- .env file in sidebar, storing important configuration settings
+- DB keys
+	- all referenced in coresponding configuration file
+	- under config folder
+	- going read key from .env file, if it doesn't exist default to mysql
+	- can use sqlite instead
+	- have to create database
+- signing in through terminal mysql -u root
+	- create database called laravel6
+- can create database manually or through GUI
+- he will be using table plus
+- manually creating a table and querying against it
+- no longer hard coding post, fetching from database
+- using DB class, selecting from table
+- often you will want to inspect a variable
+- dump and die
+- grabbing post object, but we really want the body property
+- now posts are stored in the database
+
+Hello Eloquent
+**************
+- Now pulling post from database
+- Now issue where if slug doesn't exist, we aren't doing a check
+- can check for post in view, and if we don't have it abort
+- query builder - safe and secure sql queries
+- can also use eloquent
+- can make a model
+- eloquent model is useful in two ways - same api, but also a place to store business logic
+- most of the time you will be using eloquent
+- there will be a chapter on eloquent
+
+Migrations 101
+**************
+- in recent episode we manually created table
+- instead well use command line, using migration keyword
+- find these in database directory
+- laravel we'll provide ones we'll almost always want
+- migration gives us a programmatic way to provide the structure of a table
+- can make column optional
+- can use migration to add columns to a table
+- once you've updated a migration you can rollback, don't do this in production
+
+Generate Multiple Files in a Single Command
+*******************************************
+- e.g., help when we make a model
+- using all, will also create a factory and controller
+- using make options
+
+Business Logic
+**************
+- What other logic would we put in a class?
+- Created migration, model, controller
+- php artisan tinker (php playground)
+- set column default on column in assignment table
+- make code reflect the way you would speak about the business
+- put method in model (assignment)
+- in that method we update completed field (with complete method)
+- this->completed = true, this->save
+- exposing a clean api that anyone can use
+- 
