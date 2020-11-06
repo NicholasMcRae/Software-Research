@@ -1,0 +1,64 @@
+Laracasts - https://laracasts.com/series/laravel-6-from-scratch
+
+**********
+Pre-reqs *
+**********
+
+At a glance
+***********
+- what happens when a request comes in 
+- when a person visits the url - before page is rendered, we hit server
+- application notices request for home page
+- in Laravel we associate URI with a response
+- we load controller - receives request - provides response
+- controller can generate response in many ways
+- Once controller has delegated to the model, it loads the view
+- the view receives the data from the controller, and renders it to the user
+
+**********
+Routing **
+**********
+
+Basic Routing and Views
+- laravel welcome screen
+- under routes folder
+- when user makes get request - in reponse we're loading a view
+- view is html part of code base
+- views are stored in resource directory
+- duplicating routes - registering a new one
+	- if user hits welcome, we'll do the same thing
+- can return a simple string
+- can even return JSON
+- JSON will become useful when you start building APIs
+- blade is a templating engine for laravel
+- get - loading in a browser
+
+Pass Request Data to Views
+- sometimes you'll pass data through the query string
+- can get this data using request helper function, providing key
+- can return string
+- can go into test view and echo name - view needs to receive data
+- do this in routes file in view 
+- however, we're echoing whatever user does, which is dangerous
+- so let's escape the input
+- you might use htmlspecialchars
+	- however in laravel you can surround variable in curly braces
+	- whenever referencing variables will use blade
+- php doesn't understand this, it has to be compiled, laravel does this
+- boils down to htmlspecialchars
+- laravel provides a convenient way of doing this
+- curly brace with exclamation doesn't escape - for example if you're fetching html
+
+Route Wildcards
+- often you'll need routes that accepts a wildcard
+- sometimes part of route needs to be unique - post in curly braces
+- return a view called posts
+- how do we grab that value? might need to fetch it to perform database query
+- haven't yet reviewed databases
+- can echo post itself
+- passed in array, and querying for elements of array
+- can show 404 page if array element doesn't exist
+- summary
+	- updated route for wildcard
+	- make it available on clojure
+	- simulated database
