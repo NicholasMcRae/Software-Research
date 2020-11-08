@@ -148,4 +148,29 @@ Business Logic
 - in that method we update completed field (with complete method)
 - this->completed = true, this->save
 - exposing a clean api that anyone can use
-- 
+
+*******
+Views *
+*******
+
+Layout Pages
+************
+- welcome page is in resources / views directory
+- leveraging layout files
+- only want stuff that is unique to welcome page, in welcome page
+- layout file has the general structure - content in welcome file
+- welcome file extends layout file
+- in layout file we write 'yield' anything you want, called it content
+- in view we can declare that section - with section
+- for main content section this is what we want to insert
+- templates views - so we don't repeat structure of html
+
+Integrate a Site Template
+*************************
+- download something called simple work
+- using simple work as a base for a site template (a free site template)
+
+Set an Active Menu Link
+***********************
+- Doing various things with the main template site menu
+
