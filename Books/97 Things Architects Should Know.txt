@@ -1,0 +1,66 @@
+1. Don't Prioritize resume 
+
+- choose technologies because they are the right technologies, not for other reasons
+
+2. Essential vs Accidental Complexity
+
+- When complexity is necessary, be as simple as possible. Avoid unnecessary complexity
+- Accidental complexity grows from the things we feel we must build to mitigate essential complexity
+- Over-engineered frameworks add more complexity than they relieve
+
+3. Your biggest problem likely isn't technical
+- It pays to think about what it takes to make your developers successful
+- What you need is a conversation
+- Learning to treat people with respect, and give them the benefit of the doubt makes an architect more effective
+- Conversations, not confrontations
+- When you've got the right attitude
+- Set mutually agreed upon goals
+
+4. Communication is King; Clarity and Leadership it's servants
+- Be clear and concise in the way you communicate your ideas
+- Keep things simple as possible at the start of a project
+- As a leader you must gain respect of your co-workers
+- Let people know why decisions were made the way they were
+- Work with developers, not against them
+
+5. Architecting is about balancing
+- Technical issues must be balanced with needs of business stakeholders
+- Define ultimate set of priorities
+- Don't only create functional, quality software, but also balance other priorities
+
+6. Seek the value in requested capabilities
+- Customers often state what they think is a viable solution
+- Ignore their solution and try to understand what they're trying to accomplish
+
+7. Stand up!
+- Standing up automatically communicates authority and self-confidence
+
+8. Skyscrapers aren't scalable
+- Traditional big bang deployments are like stacking up a pile of beams and girders and expecting them to stick together in the shape of a building
+- We should plan to deploy one component at a time
+- When we deploy software, we are exposing ourselves to accumulated technical risk embodied in the code
+- Lets us harden each component
+- Forces us to create well-defined interfaces between components
+
+9. You're negotiating more often than you think
+- We're looking for a collaborative solution finding exercise; they're looking for a win-lose tactical maneuver. You don't want to make a concession on the first demand
+
+10. Quantify
+- Be precise about your requirements, not vague terms like 'fast' or 'responsive'
+
+11. Working code is worth 500 lines of specs
+- Specifications alone have no value, the ultimate goal is a production system
+- Value the team who work on implementing your vision. Listen to them
+
+12. No one size fits all solution
+- Architects must develop 'contextual sense', because there is no one-size-fits-all solution to problems which may be widely diverse
+- What is reasonable within a given context
+- A big problem in the industry is that people are often responsible for solving problems requiring more contextual sense than they've accumulated
+
+13. It's never too early to think about performance
+- If you aren't looking at performance until late in the project cycle you have lost an incredible amount of information as to when performance changed
+- If performance is going to be an important criterion should begin as soon as possible
+
+14. Application architecture determines application performance
+- In the end all vendor products and application architectures are constrainted by the same fundamental principles of distributed computing and underlying physics
+- Applications run as porcesses on computers of limited capacity, communicating with each other via protocol stacks and links of non-zero latency
