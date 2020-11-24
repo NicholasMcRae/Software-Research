@@ -174,3 +174,38 @@ Set an Active Menu Link
 ***********************
 - Doing various things with the main template site menu
 
+Asset Compilation with Laravel Mix and Webpack
+**********************************************
+- footer should be in the layout file
+- lets talk about scripts and stylesheets
+- CSS was in public directory
+- but there is also the resources directory
+- depends on if you have a build process
+- if you're using a preprocessor like SASS, you need something the compiles those files down to raw CSS
+- could be using gulp or webpack
+- files in resources are compiled down to public directory
+- laravel mix is a wrapper around webpack to make common steps easy
+- mix.js
+- installs with npm are installed in your node modules directory
+- research laravel mix for the full documentation
+
+Render Dynamic Data
+*******************
+- create an 'article' table
+- inserts record with command line
+- in routes file fetching article
+- can do 'take(#) vs all'
+- latest - helper method that updates sql query for order by
+- put a for each into the html
+- can use blade to output the information
+
+Render Dynamic Data - Part 2
+****************************
+- linking each of the dynamic articles to it's own page
+- register a route to articles
+- articles/{some kind of article}
+- make a controller called articles
+- in controller you create method called show, which shows the article
+- create file in views called article
+- make the view into a template for the article
+
