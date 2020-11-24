@@ -209,3 +209,27 @@ Render Dynamic Data - Part 2
 - create file in views called article
 - make the view into a template for the article
 
+*******
+Forms *
+*******
+
+The Seven Restful Controller Actions
+************************************
+- index shows a list 
+- show, shows a specific one
+- create a new article
+- persist
+- edit
+- persist edit
+- destroy resource
+- 7 restful controller actions
+- he would recommend that you follow this convention
+
+Restful Routing
+***************
+- follow basic rest conventions across frameworks
+
+Form Handling
+*************
+- 
+
