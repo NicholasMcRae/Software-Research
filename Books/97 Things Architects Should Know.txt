@@ -110,3 +110,98 @@
 
 25. Scope is the enemy of success
 - Expanding scope is the enemy of success because the probability of failure grows faster than expected. Doubling a project's scope often increases its probability of failure by an order of magnitude
+
+26. Reuse is about people and education, not just architecture
+- the truth is that even the most beautiful, elegant and re-usable architecture, framework, or system will only be re-used by people who know it is there, know how to use it, are convinced that it is better than doing it themselves
+
+27. There is no 'I' in architecture
+- Get your own ego out of the way
+
+28. Get the 1000ft view
+- The 1000 ft view isn't directly in the source code (ground level) or the very high level view (diagrams)
+- It would provide information at the right level. It aggregates large amounts of data and multiple metrics - method count, class fan out
+- The actual view very much depends on a specific aspect of quality
+
+29. Try before choosing
+- we should delay commitment until the last responsible moment, that is the moment at which, if the team does not make a decision, it is made for them
+- when inaction results in an outcome that is not easily reversible
+- this is produent because the later a decision is made the more information is available on which to base the decision
+- the architect should constantly be on the look out for decisions that will have to be made soon
+- the architect doesn't have to make the decision just orchestrate the decision making process
+- Try a few approaches to the same problem - requires more effort but better odds of a good outcome
+
+30. Understand the business domain
+- Without business domain knowledge, it is difficult to undrestand the business problem, goals, and requirements, and therefore difficult to design an effective architecture to meet the requirements of the business
+
+31. Programming is an act of design
+- Development is a process of discovery and learning and not one of engineering and construction are fundamental to bring software practices forward
+- By accepting that carving out source code is an act of design, not an act of construction we are in a position to adopt useful management practices that are proven to work
+
+32. Time changes everything
+- Over time a good solution to the right challenge will outlast all others
+- Keep it simple
+- Was the solution an appropriate one for the problem? Did it solve the needs of the problem? Keep these as your measure, you will be a lot happier
+
+33. Give developers autonomy
+- Make sure the design is being implemented as intended, but don't stand over people's shoulders to accomplish that goal
+
+34. Value stewardship over showmanship
+- Showmanship is important in marketing, but is counter productive to leading a software development project
+- Architects must win the respect of their team by providing solid leadership and by truly understanding the technical and business domain
+- Stewardship, taking responsibility and care of another's property is the appropriate role of an architect, act in the interests of their customer 
+
+35. Warning, problems in mirror may be larger than they appear
+- issues that caused more problems than the team expected
+- often, a small part of the team identified the issue early on and the majority dismissed because they didn't understand how important it was until it was too late
+- Establish an organized approach to managing risks, track risks the same way you track bugs
+- Bad smells are worth recognizing. If the facts aren't there yet, look for the simplest tests that would provide the facts
+- Blind spots are hard to recognize. People you trust to tell you the truth when you need it are a precious resource
+
+36. The title of software architect has only lower-case 'a's; deal with it
+- don't worry about the status of architects
+
+37. Software architecture has ethical consequences
+- If programs are successful they affect the lives of many people, impact can be positive or negative
+- Every time I make a decision about how a program behaves, I am really deciding what my users can and cannot do
+- It's not ethical to worsen the lives of others, even a small bit, just to make things easy for yourself
+
+38. Everything will ultimately fail
+- Accept that, no matter what, your system will have a variety of failure modes
+- If you do not design your failure modes, then you will get whatever unpredictable, and usually dangerous, ones happen to emerge
+
+39. Context is King
+- effectively, there are no ideals, context is king, and simplicity it's humble servant
+- context is the only force that trumps simplicity when making architectural decisions
+- when I say context I refer not only to immediate forces like business drivers, but also emerging technologies and thought leadership on diverse topics
+- good architects keep track of several fast-moving targets
+- Good architecture is the product of decisions made within a context usually tainted with multiple competing priorities
+
+40. It's all about performance
+- People assume that the speed of the system will be acceptable
+- System designers must consider many aspects of performance - programmers who implement, human interactions of the system, non-interactive components
+- Measure task time, defined as the time required to complete a domain-specific task, including all human interactions with the system
+- performance of non-interactive components is equally important to the success of the system
+
+41. Engineer in the white spaces
+- A system consists of interdependent programs
+- We call the arrangement of these programs and their relationships 'architecture'
+- the arrow bridging programs looks like a direct contact, but it isn't. The white space between the boxes is filled with hardware and software components
+- It's essential to understand that static and dynamic loads that arrow must carry
+
+42. Talk the Talk
+- It is imperative that software architects, regardless of the platform they are working in, have an effective means of communication between one another
+- one means is through architecture and design patterns
+- Design patterns can be classified into four basic categories: enterprise architecture patterns, application architecture patterns, integration patterns, and design patterns
+- generally based on the level of scope within the overall architecture
+- knowing the basic design patterns as described by the Gang of Four Book is a must for any software architect
+- they are a part of a standard vocabulary
+- it is important to be aware of and understand the various anti-patterns as well - a term coined by Andrew Koenig - repeatable processes that produce ineffective results
+
+43. Heterogeneity Wins
+- As an industry we are faced with very serious problems and we need all the interoperability we can get
+- Your job as architect has become ven more challenging because technology silos are crumbling in the face of new possibilities
+
+44. Dwarves, Elves, Wizards and Kings
+- An architect is a king of sorts, must be familiar with all of these characters and ensure that the architecture has roles for all of these characters
+- The team will be severely limited in its reach if it can only approach problems in one way
+
