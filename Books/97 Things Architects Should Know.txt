@@ -205,3 +205,51 @@
 - An architect is a king of sorts, must be familiar with all of these characters and ensure that the architecture has roles for all of these characters
 - The team will be severely limited in its reach if it can only approach problems in one way
 
+45. Learn from Architects of Buildings
+- Not getting a clear lesson out of this one
+
+46. Fight repetition
+- Are your developers performing recurring tasks that need little thinking? Can you find recurring patterns in the code?
+- Duplication is evil
+- Repetitive work slows down development
+- Your responsibility is to remove it
+
+47. Welcome to the Real World
+- The real world is not binary
+- Customers are inconsistent
+- Distributed systems introduce a new set of inconsistencies
+- Awareness is a first important step towards a solution
+- Say good bye to the good old predictive architecture
+
+48. Don't Control, but Observe
+- We build loosely coupled systems because we want our systems to be flexible
+- Building a system that is flexible and can evolve over time is a good idea
+- Being a control freak is yesteryear, but letting software run wild is sure to spawn chaos
+- You have to supplement lack of control with other mechanisms to avoid doing an instrument flight with other instruments
+- Observation, model extraction, and validation, only way to architect for the 21st century
+
+49. Janus the Architect
+- an excellent IT architect will be a superior listener and evaluator
+- being able to evaluate the technical skills of your staff with the design and technology to be used within the project will aid in creating a successful project
+- a good architect is open to new ideas, tools, and designs that progress the project, team, or profession
+- a keeper of doors and passageways
+
+50. ARchitects focus is on the boundaries and interfaces
+- the hard part is to find the natural places to locate boundaries and define the appropriate interfaces needed to build a working system
+- difficult in large enterprise systems
+- old wisdom such as: minimize coupling, maximize cohesion, and do not slice through regions where high rates of info exchange are required provide some guidance
+- bounded contexts that address organizational, functional, or technical dependencies
+- The result is a context map - a powerful tool
+
+51. Challenge assumptions - especially your own
+- assumption is th emother of all screw ups
+- You should document rationale behind each decision that is made
+- valuable because it helps highlight assumptions that the architects may have that are affecting important decisions
+- It is important to make these assumptions visible and explicit for the sake of posterity
+- and don't overlook the word relevant, something that was formerly true may not be today
+- facts and assumptions are the pillars on which your software will be built, make sure they're solid
+
+52. Record your rationale
+- one type of documentation that ages well is to record the rationale behind decisions tha tare made
+- documentation may come in handy in a number of situations
+- also allows you to challenge assumptions or re-evaluate a decision, when conditions have changed
