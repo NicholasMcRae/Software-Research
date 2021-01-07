@@ -234,7 +234,7 @@
 - a good architect is open to new ideas, tools, and designs that progress the project, team, or profession
 - a keeper of doors and passageways
 
-50. ARchitects focus is on the boundaries and interfaces
+50. Architects focus is on the boundaries and interfaces
 - the hard part is to find the natural places to locate boundaries and define the appropriate interfaces needed to build a working system
 - difficult in large enterprise systems
 - old wisdom such as: minimize coupling, maximize cohesion, and do not slice through regions where high rates of info exchange are required provide some guidance
@@ -250,6 +250,51 @@
 - facts and assumptions are the pillars on which your software will be built, make sure they're solid
 
 52. Record your rationale
-- one type of documentation that ages well is to record the rationale behind decisions tha tare made
+- one type of documentation that ages well is to record the rationale behind decisions that are made
 - documentation may come in handy in a number of situations
 - also allows you to challenge assumptions or re-evaluate a decision, when conditions have changed
+
+53. Empower Developers
+- the role of an architect is usually to impose constraints
+- but you also have the opportunity to be an enabler - empower your developers
+- make sure devs have the tools they need, should be carefully chosen to make sure they are the right tools for the job at hand
+- repetitive and mindless work should be automated wherever possible
+- let developers make decisions where it won't contradict software design
+- protect developers from nonessential parts of their job
+
+54. It's all about the data
+- the data-oriented perspective, seeing the system, entirely by the structure of its underlying information can reduce a complicated system to a tangible collection of details
+- a reduction in complexity that is necessary for understanding how to build and run complex systems
+
+55. Control the data, not just the code
+- along with source code, schema and data changes are often a significant part of this process and thus warrant similar controls
+- for some reason, the data portion of the migration plan seems to be easil overlooked during architecture planning
+- as a result it can become a brittle, manual process that gets bolted on as an afterthought
+- database changes shouldn't create a ripple in your build's time space continuum
+- you need to be able to build the entire application, including the database, as one unit
+- allows confident refactoring of the data access layer
+
+56. Don't Stretch the Architecture Metaphors
+- development team starts to think that the metaphor is more important than the actual business problem
+- you start to justify odd decisions because of a fondness for the metaphor
+
+57. Focus on Application Support and Maintenance
+- the support and maintenance of an application should never, ever be an after-thought
+- since over 80% of an application's life-cycle is spent in maintenance, you should pay a lot of attention to the problems of support when you're designing
+
+58. Prepare to pick two
+- Sometimes accepting a constraint or giving up on a property can lead to a better architecture, one that is easier and less expensive to build and run
+- Treating properties as religious artifacts will stop you thinking about the problem at hand
+- Instead we should ask - why must these properties hold? What benefit is had by doing so?
+- Be a skeptic
+
+59. Prefer principles, axioms and analogies to opinion and taste
+- gives architecture a number of benefits not present if you create by only leveraging your experience and opinions
+- Disagreements about opinion and taste invariable turn into political arguments in which authority is used to win
+
+60. Start with a Walking Skeleton
+- minimal, end to end implementation of the system that links together all the main architectural components
+- starting small, with a working system exercising all the communication paths, 
+- once the skeleton is in place, it's time to put it on a working program
+- we want to find mistakes early
+- gives us a short feedback cycle
