@@ -215,19 +215,47 @@ Forms *
 
 The Seven Restful Controller Actions
 ************************************
-- index shows a list 
-- show, shows a specific one
-- create a new article
-- persist
-- edit
-- persist edit
-- destroy resource
-- 7 restful controller actions
-- he would recommend that you follow this convention
+- seven restful controller actions, you've reviewed index (list), and show (show a specific one)
+- create - new resource or article
+- store - persist - persist the create form
+- edit - existing item - show a view to edit
+- update - persist - persist the edited resource
+- destroy - delete resource
+- seven restful actions
+- you can structure however you want, but he would recommend you follow this convention
+- these will handle the bulk of what you need to do - most apps are CRUD applications
+- can be tedious to type these out
+- php artisan make:controller ProjectsController - includes all seven actions
+- can do it again with -m flag to get model
+- knock out so much of the boiler plate
+- what is the convention for the routing?
+- can use request verb
 
 Restful Routing
 ***************
-- follow basic rest conventions across frameworks
+- let's talk about REST
+- here we have two routes - articles and articles/article
+	- should allow us to view either a list or a single article
+- will work for anything
+- in this approach everything is stateless - included in the request
+- try not to put verbs in your URI
+- PUT request when we want to update rather than get
+- can be a DELETE request
+- POST - creating a new resource
+
+Form Handling
+*************
+- currently isn't a way to create a new article
+- so using restful routing we could call create
+- in his example one of the other contorllers is taking precedence over the one just created
+- create a new view
+- if we review in browser, we get a New Article
+- Create a form in the view section
+- used a cross site request forgery directive - effectively protects you from malicious users
+- throw the new article into the database
+- can redirect in the store method
+- Validation?
+- is there a more succinct way to persist an article?
 
 Form Handling
 *************
