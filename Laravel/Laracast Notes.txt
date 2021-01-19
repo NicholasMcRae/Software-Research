@@ -257,7 +257,31 @@ Form Handling
 - Validation?
 - is there a more succinct way to persist an article?
 
-Form Handling
-*************
+Form that Submits PUT Requests
+******************************
+- what about a form to edit or update?
+- put action in the Article Controller
+- then create the view
+- reuse some of the code from another view
+- can use article model to output attributes at different parts of the template
+- there's another thing you can do - route-model-binding
+- use put to update
+- at time of tutorial browsers understand get or post
+- can tell laravel we really want a put
+
+Form Validation Essentials
+**************************
+- always assume user provided data is malicious
+- set some fields as required if you want
+- can set min / max etc
+- haven't added browser level validation
+- want to do browser and server in case you circumvent
+- can populate errors variable
+- errors variable is available everywhere
+- also lost title after validating other fields
+- can set value of old value before validation
+
+Leverage Route Model Binding
+****************************
 - 
 
