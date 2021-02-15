@@ -265,4 +265,4 @@ Systems
 			- high class and method counts are sometimes the result of pointless dogmatism
 			- dogma should be resisted and more pragmatic approach adopted
 			- our goal is to keep our overall system small while we are also keeping our functions and classes small
-			- remember, however, that this rule is the lowest priority of the four rules of simple design
+			- remember, however, that this rule is the lowest priority of the four rules of simple  design
