@@ -298,3 +298,115 @@
 - once the skeleton is in place, it's time to put it on a working program
 - we want to find mistakes early
 - gives us a short feedback cycle
+
+61. It is all about the data
+- millions of instructions are complicated, but underneath we can get our brains around a smaller set of basic data structures
+- the data-oriented perspective--seeing the system entirely by the structure of its underlying information, can reduce even the most complicated system down to a tangible collection of details. A reduction incomplexity is necessary for understanding how to build and run complex systems
+- from a design perspective, the critical issue for most systems it to get the right data into the system at the right time
+- data forms the core of every system
+
+62. Make sure the simple stuff is simple
+- we don'twant to apply a complicated solution to an easy problem
+- Stop and think: does the solution fit the problem? If the answer is no, reconsider your design options
+- Keep the simple stuff simple
+- The cost incurred by a complicated solution may be larger than you're giving it credit for
+- Poor decisions are difficult to maintain, and worst - reverse
+- Add unecessary risk to the project
+- Simpler design will be much easier to integrate new requirements when they arrive
+
+63. Before anything, an architect is a developer
+- even architects are expected tocontinue learning the new developments within their respective fields. As software architects, we should be held to the same standards
+- gaining developers trust
+- part of designing a solution is having knowledge of the effort involved in developing the elements of the solution
+- if you design it you should be able to code it
+
+64. The ROI Variable
+- everything we do is a form of investment
+- investments come with a cost and carry trust that they will pay off
+- consider architectural decisions as investments and take into account the associated rate of return
+- It is a useful approach for finding out how pragmatic or appropriate every option on the table is
+
+65. Your System is Legacy; Design for it
+- your system will be legacy to the next guy - deal with it
+- this means several things
+	- clarity: it should be obvious what role components and calsses perform
+	- testability: is your system easy to verify
+	- correctness: do things work as designed or as they should. Eliminate quick and nasty fixes
+	- Traceability: can someone who has never seen the code before, jump into production, diagnose a fault, and put in a fix. Or does he need an eight week handover
+- try to think of a different team opening up the codebase and working out what's happening. This is fundamental for great architecture
+
+66. If there is only one solution, get a second opinion
+- if you can only think of one solution to a problem, you're in trouble
+- it is rarely possible to satisfy all requirements and constraints with the first solution that comes to mind
+- if you only have one solution to the problem at hand, it means that you will have no room to negotitate these tradeoffs
+- it means that if business requirements change, your system may have no room to adapt to new requirements
+- rarely, do you actually have a lack of options
+- it is much more likely due to the inexperience of the architect in this particular problem domain
+- a more insidious manifestation of this problem is when an architecture is designed from habit
+
+67. Understand the impact of change
+- a good architect designa s olution whose abstractions provide solid foundations to build upon, but are pragmatic enough to weather change
+- the great architect understands the impact of change, not just in isolated system modeules, but also between people and between systems
+- change can manifest in a variety of forms
+	- functional requirements change
+	- scalability needs evolve
+	- system interfaces are modified
+	- people in the team come and go
+- architect's role is to ensure that change is manageable
+- There are many techniques to mitigate the impact of change
+	- make small, incremental changes
+	- build repeatable test cases and run them often
+	- make building test cases easier
+	- track dependencies
+	- act and react systematically
+	- automate repetitive tasks
+- spend more time on those areas whose impact would be the greatest as a result of a bump in the road
+- reducing complexity is important, but reduced complexity does not equate to simplicity
+
+68. You have to understand hardware, too
+- for many architects hardware capacity planning is a topic that lies beyond their comfort zone, yet it remains an important part of the architect's job
+- we tend to ignore hardware demands
+- we are naturally isolated from hardware by high-level languages and software frameworks
+- without hardware expertise, predicting hardware configurations foor systems to be developed is highly error prone
+- the best defense against poor hardware planning is to work closely with an infrastructure architect
+
+69. Shortcuts now are paid back with interst later
+- maintenance will in the long runc onsume more resources than initial development of the project
+- shortcuts taken during the initial development phase of a project can result in significant maintenance costs later
+- it's also important to correct poor design decisions as quickly as they are discovered
+- poorly designed features can become the foundation for future features, making corrective action later even more costly
+- whenever you encounter an architectural problem or design flaw, insist that it be rectified now, when it is cheapest to fix. You longer you lave it to drag out, the higher the interest payment is
+
+70. Perfect is the enemy of good enough
+- Don't give in to the temptation to make your design or your implementation perfect. Aim for good enough and stop when you've achiveved it
+- good enough means that the remaining imperfections do not impact system functionality., maintainability, or performance in any meaningful way
+- The architecture and design hangs together
+- The implementation works and meets the performace requirements. Code is clea, consise, and well documented
+
+71. Avoid 'Good Ideas'
+- everyone can recognize bad ieas, it's the 'good' ones that slip through and cause trouble with scope, complexity, and sheer wasted effort
+- incorporating somethign into the application that isn't necessary to meet the business need
+
+72. Great Content Creates Great Systems
+- many initiatives focus endlessly on requirements but not the actual point of the system-- the data
+- Great content means the difference between a system that is hollow and one that is relevant
+- content is king, content is the network, content is the interface
+- part of the design process for a new system should be devoted to assessing content inventory
+- Designing an effective domain/object/data model is not enough
+
+73. The Business Versus the Angry Architect
+- there comes a time when we realize many of the issues we encounter are recurring
+- many of the problems are similar
+- we have reached homeostasis which is the perfect time to make a colossal mistake
+- the poor decision usually comes with a side of cynicism, impatience, and general anger toward inferior minds who dare contradict your superior understanding
+- in it's worst form this overconfidence bleeds into the business realm
+- we live to serve the business
+
+74. Stretch Key Dimensions to See What Breaks
+- Examine limits in the design that will occur, e.g. when system becomes wildly popular
+
+75. If you Design It, you should be able to code it
+- at the end of the day, someone has to implement your design, and the architectural acrobatics that you have the developers perform impact the project
+- don't use a pattern in your design that you haven't personally implemented before. Don't rely on a framework that you haven't coded against before etc
+- you won't be able to give a good estimate on time to implement
+
