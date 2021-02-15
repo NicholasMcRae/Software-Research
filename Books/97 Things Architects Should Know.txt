@@ -513,6 +513,36 @@
 - be able to explain problems in the language of the business
 
 93. You Can't Future-Proof Solutions
+- no one can't predict the future, if you accept this the question becomes how far ahead is the future
+- it's simply not possible to future proof an architecture
+- today's solution will always be tomorrow's problem
+- this relieves you of the burden of trying to future proof your architectures
+- choose the best solution that meets your needs today
+
+94. The User Acceptance Problem
+- Your goal as an architect is to be aware of and measure the threat of acceptance problems and work toward mitigating those threats
+- to do this you have to be cognizant of them and consider the reasons for them
+- a project champion can help avoid user acceptance problems, represents the user group or stakeholders
+
+95. The Importance of Consomme
+- Architecture requires a continual refinement of thought, repeated straining of ideas until we have determined the essence of each requirement in the system
+- we clarify our concepts to make the relations within the architecture true and internally consistent
+- many missed requirements and bugs can be traced to ambiguous, general language
+- look for contradictions in requirements
+
+96. For the End User, the Interface is the System
+- there are many good products hidden behind bad user interfaces
+- the end user will access the system through the interface
+- if the ui sucks, impression of the product will suffer
+- architect should ensure that user interface changes with the architecture reflected the expectations of the users
+
+97. Great software is not built, it is grown
+- you are tasked with providing the initial structure and arrangement of software systems that will grow and change over time, will have to be reworked, and will have to talk to other systems
+- the single biggest predictor of software failure is size, on reflection there's almost no benefit to be had from starting with a large system design
+	- means we are more likely to fail
+- resist trying to design a large complete system to meet or exceed the known requirements and desired properties, no matter how tempting that might be
+- start with a small, running system, a working subset of the intended architecture. The simplest thing that could possibly work
+- evolve it toward the grand vision
 
 
 
