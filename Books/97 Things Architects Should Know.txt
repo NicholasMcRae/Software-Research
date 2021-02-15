@@ -410,3 +410,110 @@
 - don't use a pattern in your design that you haven't personally implemented before. Don't rely on a framework that you haven't coded against before etc
 - you won't be able to give a good estimate on time to implement
 
+76. A Rose by Any Other Name Will End Up As a Cabbage
+- if you don't know what a thing should be called, you cannot know what it is
+- if you don't know what it is, you cannot sit down and write the code
+- if you can't agree on a name that is specific enough for you to know when it is wrong, then you might have some difficulty even getting started
+- design is all about trying to fulfill intentions, and names convey intentions
+- if you change the name three times, then you should stop until you know what you're trying to build
+
+77. Stable Problems Get High-Quality Solutions
+- in the real world, the best architects don't solve hard problems, they work around them
+- the skills in in drawing boundaries around diffuse and diverse software problems so that they are stable and self-contained
+- an architect should be able to look at a whole mess of concepts and data and process and separate them into smaller pieces or 'chunks'
+- the important thing about those problem chunks is that they are stable, allowing them to be solved by a system chunk that is finite and stable in scope
+- the problem chunks should be:
+	- internally cohesive - conceptually unified, so all of the tasks, data, and features are related
+	- well separated from other chunks, normalized, little or no overlap between them
+- some people will do this without realizing it, they just want to create nice interfaces
+- if the problem is stable, then when it is solved it is solved permanently
+- your core system won't need to change - the system is durable because the problem is durable
+- a stable problem allows you to create a system with a stable design, which allows you to concentrate on making an application that has very high quality
+
+78. It Takes Diligence
+- diligence is ultimately an exercise in perseverance and paying the right amount of attention to each task, and each architectural goal of the system
+
+79. Take Responsibility for Your Decisions
+- How can you become a responsible software architect who makes effective architectural decisions
+- first, you have to be fully cognizant of your decision process, whether it is agile or ceremonial
+- you should not claim that an architectural decision has been made until the following two conditions are met
+	- a decision has been put in writing, because architectural decisions are rarely trivial
+	- a decision has been communicated to the people who execute it
+- second, review your architectural decision periodically, examine the results of your decisions against expectations. identify decisions that remain valid and those that do not
+- enforce your decisions
+- delegate some decision making to others who are experts in a problem domain
+
+80. Don't Be Clever
+- Clevernes implies an ability to quickly conceive of a solution that may get you otu of a jam, but that ultimately rests on a gimmick, a shell game, or a switcharoo
+- don't be clever, be as dumb as you possibly can and still create the appropriate design
+- the appropriate design will never be clever
+- it takes a smart architect to be dumb
+
+81. Choose Your Weapons Carefully, Relinquish Them Reluctantly
+- We are often compelled to lay down our weapons of choice for new alternatives, but don't be too quick to dismiss your trusty armamemts
+- to case them aside for alternatives that haven't been proven through similar trials is a risky proposition
+- as architects we need to stay abreast of industry trends, but we don't need tobe the first to embrace fledghling technology
+- there is usually no huge advantage to being the first to adopt new technology, but there can be several drawbacks
+- many new technologies claim such advancement but few deliver it
+- Before you decide to blaze a trail with new technology, ask yourself how the business will benefit from this decision. If the best outcome is that no one will notice, rethink your decision
+
+82. Your Customer is Not Your Customer
+- Your customer's customer is your customer
+- If your customer's customer wins, your customer wins, which mean you win
+
+83. It Will Never Look Like That
+- A detailed design can easily fool you into believing you have every angle covered
+- something will happen, an external factor may affect the design
+- Design is a discovery process, as we implement, we discover new information that is often impossible to know upfront
+- the design process must be flexible and ongoing
+
+84. Choose Frameworks that Play Well With Others
+- when choosing frameworks you must consider the individual quality and features of each framework
+- also how well the frameworks that make up your system will work together, and how easy it will be to adapt them to new software you may need to add as your system evolves
+- you must choose frameworks that do not overlap, that are humble, simple, and specialized
+- it is best if each framework addresses a separate logical domain or concern and does not tread into the domain or concern of another framework you need to use
+- choose frameworks that have a high utility to baggage ratio
+
+85. Make a Strong Business Case
+- make a strong business case for your architecture
+- value proposition, metrics, business measures, know where to stop, time it right
+
+86. Control the Data, Not Just the Code
+- continuous integration and source control are excellent tools for managing the application build and deployment process
+- make data and schema management a seamless part of your automated build and testing process early on and include an undo button; it will pay large dividends
+
+87. Pay Down Your Technical Debt
+- on any project that is in production there will come a time when a change must be made
+- at that point you can either do it right or you can take one or more shortcuts and try to get the change out the door sooner
+- proper technical debt should be re-paid
+
+88. Don't Be a Problem Solver
+-Sometimes the best solution is no solution. Many software problems don't need to be solved at all
+- We must not be passive receptacles for requirements, cheerfully ready at our posts, handing out our smartest solution
+- see if you can change the problem. What would the architecture look like if I just didn't have this problem
+
+89. Build Systems to Be Zuhanden
+- our systems exist to help someone do something
+- Consider what it feels like to hammer a nail or to write with a pen. Think about that immediacy. Think about the way the tool seems to be a seamless extension of your body
+- a tool should move you toward your goal and not impede your progress
+
+90. Find and Retain Passionate Problem Solvers
+- You need to carefully select your development team and protect it once assembled
+- You are searching for developers with problem-solving skills and passion
+- You need people who are good at attacking problems regardless of the technologies involved
+
+91. Sof5tware Doesn't Really Exist
+- Assuming you can implement the design in the same mannager used by more traditional engineering approaches is unrealistic
+- in software things need to be tackled in more of a plan the work, massage the plan fashion
+- business owners are vaguely aware of these facts, makes it easy for them to push big changes
+- a requirements document is not a blueprint
+
+92. Learn a New Language
+- you should at least speak basic business, and testing
+- be able to explain problems in the language of the business
+
+93. You Can't Future-Proof Solutions
+
+
+
+
