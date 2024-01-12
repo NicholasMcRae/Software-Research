@@ -1,0 +1,64 @@
+https://softwareengineering.stackexchange.com/questions/190080/what-can-a-technically-proficient-senior-software-developer-study-to-keep-improv
+
+First, despite the way your question is formulated, there is no end to any studying, especially not in our field, where new things pop up faster than you can read about them. That being said, when you want to improve, there are the following categories that I'd consider. For the most benefit/ROI you should choose something from your weakest area of course.
+
+Foundational Knowledge
+Despite knowing programming languages and having practical experience, one often has (esp. self-learned) areas where basic foundational issues are left incomplete. Think about things like data structures, algorithms, cache strategies, hash functions, ...
+
+Note that this also includes the foundations of programming languages - everything from compilers, optimization techniques and type systems, up to category theory, monads, and the like.
+
+If you are well taught, as in have persued a university level degree for several years, then you are likely to already be strong in this category (far from finished of course, but a solid basis). Otherwise, do try to read a few books in these areas to find out if there's anything you didn't even know was missing in your repertoire. This category is the easiest to over-estimate yourself in.
+
+Paradigmatic Knowledge
+I am always astounded when programmers show up who think they are know-it-alls, yet are completely ignorant on other than the mainstream paradigms. If you think object-orientation is the end of it, this is your category for improvement. If you think functional programming exists too and might even have heard of logic programming, then it's still a good choice. There are way more paradigms out there and learning about them has the profound effect of giving you something akin to a new view of the world of programming.
+
+Just don't forget: there are often (rather philosophical in their nature) arguments about what can be considered a paradigm or not. Don't get side-tracked by these. Your goal should be to broaden your horizon and that means learning about these things, whether someone else considers X a paradigm on its own, or not, does not make any difference to that.
+
+Specialist Knowledge
+The easiest of them all - and the least useful at the same time. Of course, you can commit yourself to a single technology and get to know all its ins and outs, but you should be prepared to pay the price. Technologies age and they do so in an ever-increasing speed, which makes it almost a guarantee that time invested here will be worthless several years down the road.
+
+Also the problem of diminishing return shines here. By the very nature being a specialist on something means you have to spend countless hours on that narrow subject, and hence, by definition it will take you a long time to learn something new and that new thing will be a tiny little puzzle piece that is not going to change anyone's views of anything.
+
+Domain Knowledge
+Be it because it's your work's domain, or simply based on your personal interest, but being an expert in computer science and a certain domain is very valuable and rewarding. I am not talking about side-areas of CS here, like computer graphics or AI. Instead notice that computers have taken a hold in everyone's life and that makes every other field subject to computers and an area you can get into.
+
+This one clearly falls into the category of "outside your field", yet it is not a sharp mathematical "outside", but rather a field of application. Consider medicine: I am not advicing you to become a doctor. However, learning the foundations of medicine in order to apply your existing knowledge about computer science to that field's problems is indeed worthwhile. This ranges from visualization techniques, over robotics, to expert systems and mere data management for accounting/administration. While you have done all of that before, doing it in another domain can end up being a whole new experience.
+
+Keep in mind though, that this is a way more radical change in your direction than the other categories. You may not have any contact to that field in your day-to-day work, which makes it extremely hard to pull off. It may even mean switching jobs. Plus, you will need some sort of certification about your new domain - you are a complete newbie to that domain after all, and you have to compete against graduates from interdisciplinary studies, which already began their journey to become experts in that niche.
+
+Supplementary Knowledge
+As Mike Brown added, there is also the area of knowledge which in some way accompanies your current job, but is not strictly necessary. You do not need to be a project manager to learn about project management, but as usual, additional knowledge will give you a larger insight on how the other side ticks. One could even generalize this to the point of focusing on soft skills. I guess everyone who worked on a real project with other people knows the value of these.
+
+**************************************************************************************
+
+I think that software is always evolving and as such there is an emphasis on constant improvement. I understand where you're coming from, I've felt somewhat similar recently and I'm now pursuing an MCSM in SQL Server.
+
+Learn the next new language, or framework, or what's currently "hot". Every year there is a technology, framework or language that comes out, or reaches critical mass that it becomes a buzz word in its own right. I can think a few of these over the past few years: node.js, Ruby, jQuery. This will also likely impact your way of thinking for other platforms, for example, look at what ROR did to Java with Grails.
+
+There is always room for improvement. I think it is very unlikely that you can be an expert on everything, and I read a lot and I am always learning. I do agree with what you say about learning less and less per 100 pages, but this is to be expected when you're a subject matter expert.
+
+In terms of what you can do, here are some suggestions:
+
+Keep abreast of community changes and what people are "getting into". Learn the new stacks, at least so you have enough to recommend them where appropriate
+
+Participate in Q&A sites such as this, where you can impart your knowledge on others. If you take the time to read other peoples contributions, you will likely learn something, and at the very least you will likely see the perspectives other people have.
+
+Pick a hobby that has some relation to your work. There are plenty of hobbies with cross over, think AI, lego mindstorms, RaspPi, etc.
+
+As well as trying to increase the width of your knowledge, look at increasing the depth. For example, learn how EF works under the cover, so you can diagnose those weird corner cases rather than just use the framework.
+
+Pursue top level certification just to prove you know your stuff
+
+Personally, I'll tell you what's opening my mind at the moment. I'm reading 97 Things Every Software Architect Should Know and I'm only partially though it but it's thrown up a lot of sage advice. The book is free to read online at the link I provided.
+
+In terms of the hobby I ultimately took up, I got into vehicle diagnostics (with the computer, obviously) which got me fully maintaining my own car. I actually really enjoy the time I spend working with my hands.
+
+******************************************************************************************
+
+After a certain point, you've learned enough about a specific topic that you are comfortable picking up new knowledge on an ad hoc basis. When you feel that there is not much more to learn about your primary field, it's time to start gaining supplemental knowledge that complements your primary knowledge.
+
+For me, I am diving into UX and graphic design because I feel that will make me better as a developer to provide not just elegant structures in code but also elegant interfaces for the end user.
+
+Other topics you can approach include project management, business analysis, system administration, and software process improvement. If you find yourself working in a specific domain, it might make sense to dive deeper into that domain. For example, I have been working heavily in the financial services sector lately. I've signed up for courses on Coursera around financial modeling and the like that will help me speak with my customers on their terms.
+
+There's always more to learn, it just takes thinking outside the box.
