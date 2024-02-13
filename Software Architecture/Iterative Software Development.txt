@@ -1,0 +1,1 @@
+- The phrase "iterative software development" suffers from the same drawback as "evidence-based medicine" in that it suggests there may be rational alternatives.
