@@ -1,0 +1,406 @@
+https://www.methodsandtools.com/archive/agilesoftwarearchitecture.php
+
+
+Methods & Tools Software Development Magazine	
+Software Development Magazine - Project Management, Programming, Software Testing
+
+Scrum Expert - Articles, tools, videos, news and other resources on Agile, Scrum and Kanban
+
+HomeArticlesToolsNewslettersSubscribeMagazineLinksSearch
+A Risk-Driven Model for Agile Software Architecture
+
+George Fairbanks, Rhino Research, http://rhinoresearch.com/
+
+This article is excerpted from Chapter 3 of the book Just Enough Software Architecture: A Risk-Driven Approach [6], available in hardback or as an e-book from http://RhinoResearch.com. © 2010 George Fairbanks
+
+Developers have access to more architectural design techniques than they can afford to apply. The Risk-Driven Model guides developers to do just enough architecture by identifying their project's most pressing risks and applying only architecture and design techniques that mitigate them. The key element of the Risk-Driven Model is the promotion of risk to prominence. It is possible to apply the Risk-Driven Model to essentially any software development process, such as waterfall or agile, while still keeping within its spirit.
+
+As they build successful software, software developers are choosing from alternate designs, discarding those that are doomed to fail, and preferring options with low risk of failure. When risks are low, it is easy to plow ahead without much thought, but, invariably, challenging design problems emerge and developers must grapple with high-risk designs, ones they are not sure will work. Henry Petroski, a leading historian of engineering, says this about engineering as a whole:
+
+The concept of failure is central to the design process, and it is by thinking in terms of obviating failure that successful designs are achieved. ... Although often an implicit and tacit part of the methodology of design, failure considerations and proactive failure analysis are essential for achieving success. And it is precisely when such considerations and analyses are incorrect or incomplete that design errors are introduced and actual failures occur. [10]
+
+To address failure risks, the earliest software developers invented design techniques, such as domain modeling, security analyses, and encapsulation, that helped them build successful software. Today, developers can choose from a huge number of design techniques. From this abundance, a hard question arises: Which design and architecture techniques should developers use?
+
+If there were no deadlines then the answer would be easy: use all the techniques. But that is impractical because a hallmark of engineering is the efficient use of resources, including time. One of the risks developers face is that they waste too much time designing. So a related question arises: How much design and architecture should developers do?
+
+A Risk-Driven Model for Agile Software Architecture
+
+There is much active debate about this question and several kinds of answers have been suggested:
+
+No up-front design. Developers should just write code. Design happens, but is coincident with coding, and happens at the keyboard rather than in advance.
+Use a yardstick. For example, developers should spend 10% of their time on architecture and design, 40% on coding, 20% on integrating, and 30% on testing.
+Build a documentation package. Developers should employ a comprehensive set of design and documentation techniques sufficient to produce a complete written design document.
+Ad hoc. Developers should react to the project needs and decide on the spot how much design to do.
+The ad hoc approach is perhaps the most common, but it is also subjective and provides no enduring lessons. Avoiding design altogether is impractical when failure risks are high, but so is building a complete documentation package when risks are low. Using a yardstick can help you plan how much effort designing the architecture will take, but it does not help you choose techniques.
+
+This article introduces the risk-driven model of architectural design. Its essential idea is that the effort you spend on designing your software architecture should be commensurate with the risks faced by your project. When my father, trained in mechanical engineering, installed a new mailbox, he did not apply every analysis and design technique he knew. Instead, he dug a hole, put in a post, and filled the hole with concrete. The risk-driven model can help you decide when to apply architecture techniques and when you can skip them.
+
+Where a software development process orchestrates every activity from requirements to deployment, the risk-driven model guides only architectural design, and can therefore be used inside any software development process.
+
+The risk-driven model is a reaction to a world where developers are under pressure to build high quality software quickly and at reasonable cost, yet those developers have more architecture techniques than they can afford to apply. The risk-driven model helps them answer the two questions above: how much software architecture work should they do, and which techniques should they use? It is an approach that helps developers follow a middle path, one that avoids wasting time on techniques that help their projects only a little but ensures that project-threatening risks are addressed by appropriate techniques.
+
+In this article, we will examine how risk reduction is central to all engineering disciplines, learn how to choose techniques to reduce risks, understand how engineering risks interact with management risks, and learn how we can balance planned design with evolutionary design. This article walks through the ideas that underpin the risk-driven model.
+
+1 What is the risk-driven model?
+
+The risk-driven model guides developers to apply a minimal set of architecture techniques to reduce their most pressing risks. It suggests a relentless questioning process: "What are my risks? What are the best techniques to reduce them? Is the risk mitigated and can I start (or resume) coding?" The risk-driven model can be summarized in three steps:
+
+1. Identify and prioritize risks
+
+2. Select and apply a set of techniques
+
+3. Evaluate risk reduction
+
+You do not want to waste time on low-impact techniques, nor do you want to ignore project-threatening risks. You want to build successful systems by taking a path that spends your time most effectively. That means addressing risks by applying architecture and design techniques but only when they are motivated by risks.
+
+1.1 Risk or feature focus
+
+The key element of the risk-driven model is the promotion of risk to prominence. What you choose to promote has an impact. Most developers already think about risks, but they think about lots of other things too, and consequently risks can be overlooked. A recent paper described how a team that had previously done up-front architecture work switched to a purely feature-driven process. The team was so focused on delivering features that they deferred quality attribute concerns until after active development ceased and the system was in maintenance [1]. The conclusion to draw is that teams that focus on features will pay less attention to other areas, including risks. Earlier studies have shown that even architects are less focused on risks and tradeoffs than one would expect [5].
+
+1.2 Logical rationale
+
+But what if your perception of risks differs from others' perceptions? Risk identification, risk prioritization, choice of techniques, and evaluation of risk mitigation will all vary depending on who does them. Is the risk-driven model merely improvisation?
+
+No. Though different developers will perceive risks differently and consequently choose different techniques, the risk-driven model has the useful property that it yields arguments that can be evaluated. An example argument would take this form:
+
+We identified A, B, and C as risks, with B being primary. We spent time applying techniques X and Y because we believed they would help us reduce the risk of B. We evaluated the resulting design and decided that we had sufficiently mitigated the risk of B, so we proceeded on to coding.
+
+This allows you to answer the broad question, "How much software architecture should you do?" by providing a plan (i.e., the techniques to apply) based on the relevant context (i.e., the perceived risks).
+
+Other developers might disagree with your assessment, so they could provide a differing argument with the same form, perhaps suggesting that risk D be included. A productive, engineering-based discussion of the risks and techniques can ensue because the rationale behind your opinion has been articulated and can be evaluated.
+
+2 Are you risk-driven now?
+
+Many developers believe that they already follow a risk-driven model, or something close to it. Yet there are telltale signs that many do not. One is an inability to list the risks they confront and the corresponding techniques they are applying.
+
+Any developer can answer the question, "Which features are you working on?" but many have trouble with the question, "What are your primary failure risks and corresponding engineering techniques?" If risks were indeed primary then they would find it an easy question to answer.
+
+2.1 Technique choices should vary
+
+Projects face different risks so they should use different techniques. Some projects will have tricky quality attribute requirements (e.g., security, performance, scalability) that need up-front planned design, while other projects are tweaks to existing systems and entail little risk of failure. Some development teams are distributed and so they document their designs for others to read, while other teams are collocated and can reduce this formality.
+
+When developers fail to align their architecture activities with their risks, they will over-use or under-use architectural techniques, or both. Examining the overall context of software development suggests why this can occur. Most organizations guide developers to follow a process that includes some kind of documentation template or a list of design activities. These can be beneficial and effective, but they can also inadvertently steer developers astray.
+
+Here are some examples of well-intentioned rules that guide developers to activities that may be mismatched with their project's risks.
+
+The team must always (or never) build full documentation for each system.
+The team must always (or never) build a class diagram, a layer diagram, etc.
+The team must spend 10% (or 0%) of the project time on architecture.
+Such guidelines can be better than no guidance, but each project will face a different set of risks. It would be a great coincidence if the same set of diagrams or techniques were always the best way to mitigate a changing set of risks.
+
+2.2 Example mismatch
+
+Imagine a company that builds a 3-tier system. The first tier has the user interface and is exposed to the internet. Its biggest risks might be usability and security. The second and third tiers implement business rules and persistence; they are behind a firewall. The biggest risks might be throughput and scalability.
+
+If this company followed the risk-driven model, the front-end and back-end developers would apply different architecture and design techniques to address their different risks. Instead, what often happens is that both teams follow the same company-standard process or template and produce, say, a module dependency diagram. The problem is that there is no connection between the techniques they use and the risks they face.
+
+Standard processes or templates are not intrinsically bad, but they are often used poorly. Over time, you may be able to generalize the risks on the projects at your company and devise a list of appropriate techniques. The important part is that the techniques match the risks.
+
+The three steps to risk-driven software architecture are deceptively simple but the devil is in the details. What exactly are risks and techniques? How do you choose an appropriate set of techniques? And when do you stop architecting and start/resume building? The following sections dig into these questions in more detail.
+
+3 Risks
+
+In the context of engineering, risk is commonly defined as the chance of failure times the impact of that failure. Both the probability of failure and the impact are uncertain because they are difficult to measure precisely. You can sidestep the distinction between perceived risks and actual risks by bundling the concept of uncertainty into the definition of risk. The definition of risk then becomes:
+
+risk = perceived probability of failure x perceived impact
+
+A result of this definition is that a risk can exist (i.e., you can perceive it) even if it does not exist. Imagine a hypothetical program that has no bugs. If you have never run the program or tested it, should you worry about it failing? That is, should you perceive a failure risk? Of course you should, but after you analyze and test the program, you gain confidence in it, and your perception of risk goes down. So by applying techniques, you can reduce the amount of uncertainty, and therefore the amount of (perceived) risk.
+
+3.1 Describing risks
+
+You can state a risk categorically, often as the lack of a needed quality attribute like modifiability or reliability. But often this is too vague to be actionable: if you do something, are you sure that it actually reduces the categorical risk?
+
+It is better to describe risks such that you can later test to see if they have been mitigated. Instead of just listing a quality attribute like reliability, describe each risk of failure as a testable failure scenario, such as "During peak loads, customers experience user interface latencies greater than five seconds."
+
+3.2 Engineering and project management risks
+
+Projects face many different kinds of risks, so people working on a project tend to pay attention to the risks related to their specialty.
+
+Project management risks
+
+Software engineering risks
+
+"Lead developer hit by bus"
+
+"The server may not scale to 1000 users"
+
+"Customer needs not understood"
+
+"Parsing of the response messages may be buggy"
+
+"Senior VP hates our manager"
+
+"The system is working now but if we touch anything it may fall apart"
+
+Figure 1: Examples of project management and engineering risks. You should distinguish them because engineering techniques rarely solve management risks, and vice versa.
+
+For example, the sales team worries about a good sales strategy and software developers worry about a system's scalability. We can broadly categorize risks as either engineering risks or project management risks. Engineering risks are those risks related to the analysis, design, and implementation of the product. These engineering risks are in the domain of the engineering of the system. Project management risks relate to schedules, sequencing of work, delivery, team size, geography, etc. Figure 1 shows examples of both.
+
+If you are a software developer, you are asked to mitigate engineering risks and you will be applying engineering techniques. The technique type must match the risk type, so only engineering techniques will mitigate engineering risks. For example, you cannot use a PERT chart (a project management technique) to reduce the chance of buffer overruns (an engineering risk), and using Java will not resolve stakeholder disagreements.
+
+3.3 Identifying risks
+
+Experienced developers have an easy time identifying risks, but what can be done if the developer is less experienced or working in an unfamiliar domain? The easiest place to start is with the requirements, in whatever form they take, and looking for things that seem difficult to achieve. Misunderstood or incomplete quality attribute requirements are a common risk. You can use Quality Attribute Workshops [2], a Taxonomy-Based Questionnaire [4], or something similar, to elicit risks and produce a prioritized list of failure scenarios.
+
+Even with diligence, you will not be able to identify every risk. When I was a child, my parents taught me to look both ways before crossing the street because they identified cars as a risk. It would have been equally bad if I had been hit by a car or by a falling meteor, but they put their attention on the foreseen and high priority risk. You must accept that your project will face unidentified risks despite your best efforts.
+
+3.4 Prototypical risks
+
+After you have worked in a domain for a while, you will notice prototypical risks that are common to most projects in that domain. For example, Systems projects usually worry more about performance than IT projects do, and Web projects almost always worry about security.
+
+Project domain
+
+Prototypical risks
+
+Information Technology
+
+Complex, poorly understood problem
+
+Unsure we're solving the real problem
+
+May choose wrong COTS software
+
+Integration with existing, poorly understood software
+
+Domain knowledge scattered across people
+
+Modifiability
+
+Systems
+
+Performance, reliability, size, security
+
+Concurrency
+
+Composition
+
+Web
+
+Security
+
+Application scalability
+
+Developer productivity / expressability
+
+Figure 2: While each project can have a unique set of risks, it is possible to generalize by domain. Prototypical risks are ones that are common in a domain and are a reason that software development practices vary by domain. For example, developers on Systems projects tend to use the highest performance languages.
+
+Prototypical risks may have been encoded as checklists describing historical problem areas, perhaps generated from architecture reviews. These checklists are valuable knowledge for less experienced developers and a helpful reminder for experienced ones.
+
+Knowing the prototypical risks in your domain is a big advantage, but even more important is realizing when your project differs from the norm so that you avoid blind spots. For example, software that runs a hospital might most closely resemble an IT project, with its integration concerns and complex domain types. However, a system that takes 10 minutes to reboot after a power failure is usually a minor risk for an IT project, but a major risk at a hospital.
+
+3.5 Prioritizing risks
+
+Not all risks are equally large, so they can be prioritized. Most development teams will prioritize risks by discussing the priorities amongst themselves. This can be adequate, but the team's perception of risks may not be the same as the stakeholders' perception. If your team is spending enough time on software architecture for it to be noticeable in your budget, it is best to validate that time and money are being spent in accordance with stakeholder priorities.
+
+Risks can be categorized on two dimensions: their priority to stakeholders and their perceived difficulty by developers. Be aware that some technical risks, such as platform choices, cannot be easily assessed by stakeholders. This is the same categorization technique used in ATAM to prioritize architecture drivers and quality attribute scenarios [3].
+
+Formal procedures exist for cataloging and prioritizing risks using risk matrices, including a US military standard MILSTD882D. Formal prioritization of risks is appropriate if your system, for example, handles radioactive material, but most computer systems can be less formal.
+
+Software engineering
+
+Other engineering
+
+Applying design or architecture pattern
+
+Stress calculations
+
+Domain modeling
+
+Breaking point test
+
+Throughput modeling
+
+Thermal analysis
+
+Security analysis
+
+Reliability testing
+
+Prototyping
+
+Prototyping
+
+Figure 3: A few examples of engineering risk reduction techniques in software engineering and other fields. Modeling is commonplace in all engineering fields.
+
+4 Techniques
+
+Once you know what risks you are facing, you can apply techniques that you expect to reduce the risk. The term technique is quite broad, so we will focus specifically on software engineering risk reduction techniques, but for convenience continue to use the simple name technique. Figure 3 shows a short list of software engineering techniques and techniques from other engineering fields.
+
+4.1 Spectrum from analyses to solutions
+
+Imagine you are building a cathedral and you are worried that it may fall down. You could build models of various design alternatives and calculate their stresses and strains. Alternately, you could apply a known solution, such as using a flying buttress. Both work, but the former approach has an analytical character while the latter has a known-good solution character.
+
+Techniques exist on a spectrum from pure analyses, like calculating stresses, to pure solutions, like using a flying buttress on a cathedral. Other software architecture and design books have inventoried techniques on the solution-end of the spectrum, and call these techniques tactics [3]or patterns [12,7], and include such solutions as using a process monitor, a forwarder-receiver, or a model-view-controller.
+
+The risk-driven model focuses on techniques that are on the analysis-end of the spectrum, ones that are procedural and independent of the problem domain. These techniques include using models such as layer diagrams, component assembly models, and deployment models; applying analytic techniques for performance, security, and reliability; and leveraging architectural styles such as client-server and pipe-and-filter to achieve an emergent quality.
+
+4.2 Techniques mitigate risks
+
+Design is a mysterious process, where virtuosos can make leaps of reasoning between problems and solutions [13]. For your process to be repeatable, however, you need to make explicit what the virtuosos are doing tacitly. In this case, you need to be able to explicitly state how to choose techniques in response to risks. Today, this knowledge is mostly informal, but we can aspire to creating a handbook that would help us make informed decisions. It would be filled with entries that look like this:
+
+If you have <a risk>, consider <a technique> to reduce it.
+
+Such a handbook would improve the repeatability of designing software architectures by encoding the knowledge of virtuoso architects as mappings between risks and techniques.
+
+Any particular technique is good at reducing some risks but not others. In a neat and orderly world, there would be a single technique to address every known risk. In practice, some risks can be mitigated by multiple techniques, while others risks require you to invent techniques on the fly.
+
+This frame of mind, where you choose techniques based on risks, helps you to work efficiently. You do not want to waste time (or other resources) on low-impact techniques, nor do you want to ignore project-threatening risks. You want to build successful systems by taking a path that spends your time most effectively. That means only applying techniques when they are motivated by risks.
+
+4.3 Optimal basket of techniques
+
+To avoid wasting your time and money, you should choose techniques that best reduce your prioritized list of risks. You should seek out opportunities to kill two birds with one stone by applying a single technique to mitigate two or more risks. You might like to think of it as an optimization problem to choose a set of techniques that optimally mitigates your risks.
+
+It is harder to decide which techniques should be applied than it appears at first glance. Every technique does something valuable, just not the valuable thing your project needs most. For example, there are techniques for improving the usability of your user interfaces. Imagine you successfully used such techniques on your last project, so you choose it again on your current project. You find three usability flaws in your design, and fix them. Does this mean that employing the usability technique was a good idea?
+
+Not necessarily, because such reasoning ignores the opportunity cost. The fair comparison is against the other techniques you could have used. If your biggest risk is that your chosen framework is inappropriate, you should spend your time analyzing or prototyping your framework choice instead of on usability. Your time is scarce, so you should choose techniques that are maximally effective at reducing your failure risks, not just somewhat effective.
+
+4.4 Cannot eliminate engineering risk
+
+Perhaps you are wondering why we should try to create an optimal basket of techniques when we should go all the way and eliminate engineering risk. It is tempting, since engineers hate ignoring risks, especially those they know how to address.
+
+The downside of trying to eliminate engineering risk is time. As aviation pioneers, the Wright brothers spent time on mathematical and empirical investigations into aeronautical principles and thus reduced their engineering risk. But, if they had continued these investigations until risks were eliminated, their first test flight might have been in 1953 instead of 1903.
+
+The reason you cannot afford to eliminate engineering risk is because you must balance it with non-engineering risk, which is predominantly, project management risk. Consequently, a software developer does not have the option to apply every useful technique because risk reductions must be balanced against time and cost.
+
+5 Guidance on choosing techniques
+
+So far, you have been introduced to the risk-driven model and have been advised to choose techniques based on your risks. You should be wondering how to make good choices. In the future, perhaps a developer choosing techniques will act much like a mechanical engineer who chooses materials by referencing tables of properties and making quantitative decisions. For now, such tables do not exist. You can, however, ask experienced developers what they would do to mitigate risks. That is, you would choose techniques based on their experience and your own.
+
+However, if you are curious, you would be dissatisfied either with a table or a collection of advice from software veterans. Surely there must be principles that underlie any table or any veteran's experience, principles that explain why technique X works to mitigate risk Y.
+
+Such principles do exist and we will now take a look at some important ones. Here is a brief preview. First, sometimes you have a problem to find while other times you have a problem to prove, and your technique choice should match that need. Second, some problems can be solved with an analogic model while others require an analytic model, so you will need to differentiate these kinds of models. Third, it may only be efficient to analyze a problem using a particular type of model. And finally, some techniques have affinities, like pounding is suitable for nails and twisting is suitable for screws.
+
+5.1 Problems to find and prove
+
+In his book How to Solve It, George Polya identifies two distinct kinds of math problems: problems to find and problems to prove [11]. The problem, "Is there a number that when squared equals 4?" is a problem to find, and you can test your proposed answer easily. On the other hand, "Is the set of prime numbers infinite?" is a problem to prove. Finding things tends to be easier than proving things because for proofs you need to demonstrate something is true in all possible cases.
+
+When searching for a technique to address a risk, you can often eliminate many possible techniques because they answer the wrong kind of Polya question. Some risks are specific, so they can be tested with straightforward test cases. It is easy to imagine writing a test case for "Can the database hold names up to 100 characters?" since it is a problem to find. Similarly, you may need to design a scalable website. This is also a problem to find because you only need to design (i.e., find) one solution, not demonstrate that your design is optimal.
+
+Conversely, it is hard to imagine a small set of test cases providing persuasive evidence when you have a problem to prove. Consider, "Does the system always conform to the framework Application Programming Interface (API)?" Your tests could succeed, but there could be a case you have not yet seen, perhaps when a framework call unexpectedly passes a null reference. Another example of a problem to prove is deadlock: Any number of tests can run successfully without revealing a problem in a locking protocol.
+
+5.2 Analytic and analogic models
+
+Michael Jackson, crediting Russell Ackoff, distinguishes between analogic models and analytic models [8,9]. In an analogic model, each model element has an analogue in the domain of interest. A radar screen is an analogic model of some terrain, where blips on the screen correspond to airplanes - the blip and the airplane are analogues.
+
+Analogic models support analysis only indirectly and usually domain knowledge or human reasoning are required. A radar screen can help you answer the question, "Are these planes on a collision course?" but to do so you are using your special purpose brainpower in the same way that an outfielder can tell if he is in position to catch a fly ball.
+
+An analytic (what Ackoff would call symbolic) model, by contrast, directly supports computational analysis. Mathematical equations are examples of analytic models, as are state machines. You could imagine an analytic model of the airplanes where each is represented by a vector. Mathematics provides an analytic capability to relate the vectors, so you could quantitatively answer questions about collision courses.
+
+When you model software, you invariably use symbols, whether they are Unified Modeling Language (UML) elements or some other notation. You must be careful because some of those symbolic models support analytic reasoning while others support analogic reasoning, even when they use the same notation. For example, two different UML models could represent airplanes as classes one with and one without an attribute for the airplane's vector. The UML model with the vector enables you to compute a collision course, so it is an analytic model. The UML model without the vector does not, so it is an analogic model. So simply using a defined notation, like UML, does not guarantee that your models will be analytic. Architecture description languages (ADLs) are more constrained than UML, with the intention of nudging your architecture models to be analytic ones.
+
+Whether a given model is analytic or analogic depends on the question you want it to answer. Either of the UML models could be used to count airplanes, for example, and so could be considered analytic models.
+
+When you know what risks you want to mitigate, you can appropriately choose an analytic or analogic model. For example, if you are concerned that your engineers may not understand the relationships between domain entities, you may build an analogic model in UML and confirm it with domain experts. Conversely, if you need to calculate response time distributions, then you will want an analytic model.
+
+5.3 Viewtype matching
+
+The effectiveness of some risk-technique pairings depends on the type of model or view used. The module viewtype includes tangible artifacts such as source code and classes; the runtime viewtype includes runtime structures like objects; and the allocation viewtype includes allocation elements like server rooms and hardware. It is easiest to reason about modifiability from the module viewtype, performance from the runtime viewtype, and security from the deployment and module viewtypes.
+
+Each view reveals selected details of a system. Reasoning about a risk works best when the view being used reveals details relevant to that risk. For example, reasoning about a runtime protocol is easier with a runtime view, perhaps a state machine, than with source code. Similarly, it is easier to reason about single points of failure using an allocation view than a module view.
+
+Despite this, developers are adaptable and will work with the resources they have, and will mentally simulate the other viewtypes. For example, developers usually have access to the source code, so they have become quite adept at imagining the runtime behavior of the code and where it will be deployed. While a developer can make do with source code, reasoning will be easier when the risk and viewtype are matched, and the view reveals details related to the risk.
+
+5.4 Techniques with affinities
+
+In the physical world, tools are designed for a purpose: hammers are for pounding nails, screwdrivers are for turning screws, saws are for cutting. You may sometimes hammer a screw, or use a screwdriver as a pry bar, but the results are better when you use the tool that matches the job.
+
+In software architecture, some techniques only go with particular risks because they were designed that way and it is difficult to use them for another purpose. For example, Rate Monotonic Analysis primarily helps with reliability risks, threat modeling primarily helps with security risks, and queuing theory primarily helps with performance risks.
+
+6 When to stop
+
+The beginning of this article posed two questions. So far, this article has explored the first: Which design and architecture techniques should you use? The answer is to identify risks and choose techniques to combat them. The techniques best suited to one project will not be the ones best suited to another project. But the mindset of aligning your architecture techniques, your experience, and the guidance you have learned will steer you to appropriate techniques.
+
+We now turn our attention to the second question: How much design and architecture should you do? Time spent designing or analyzing is time that could have been spent building, testing, etc., so you want to get the balance right, neither doing too much design, nor ignoring risks that could swamp your project.
+
+6.1 Effort should be commensurate with risk
+
+The risk-driven model strives to efficiently apply techniques to reduce risks, which means not over-or under-applying techniques. To achieve efficiency, the risk-driven model uses this guiding principle:
+
+Architecture efforts should be commensurate with the risk of failure.
+
+If you recall the story of my father and the mailbox, he was not terribly worried about the mailbox falling over, so he did not spend much time designing the solution or applying mechanical engineering analyses. He thought about the design a little bit, perhaps considering how deep the hole should be, but most of his time was spent on implementation.
+
+When you are unconcerned about security risks, spend no time on security design. However, when performance is a project-threatening risk, work on it until you are reasonably sure that performance will be OK.
+
+6.2 Incomplete architecture designs
+
+When you apply the risk-driven model, you only design the areas where you perceive failure risks. Most of the time, applying a design technique means building a model of some kind, either on paper or a whiteboard. Consequently, your architecture model will likely be detailed in some areas and sketchy, or even non-existent, in others.
+
+For example, if you have identified some performance risks and no security risks, you would build models to address the performance risks, but those models would have no security details in them. Still, not every detail about performance would be modeled and decided. Remember that models are an intermediate product and you can stop working on them once you have become convinced that your architecture is suitable for addressing your risks.
+
+6.3 Subjective evaluation
+
+The risk-driven model says to prioritize your risks, apply chosen techniques, then evaluate any remaining risk, which means that you must decide if the risk has been sufficiently mitigated. But what does sufficiently mitigated mean? You have prioritized your risks, but which risks make the cut and which do not?
+
+The risk-driven model is a framework to facilitate your decision making, but it cannot make judgment calls for you. It identifies salient ideas (prioritized risks and corresponding techniques) and guides you to ask the right questions about your design work. By using the risk-driven model, you are ahead because you have identified risks, enacted corresponding techniques, and kept your effort commensurate with your risks. But eventually you must make a subjective evaluation: will the architecture you designed enable you to overcome your failure risks?
+
+About the article
+
+This article is excerpted from Chapter 3 of the book Just Enough Software Architecture: A Risk-Driven Approach [6], available in hardback or as an e-book from http://RhinoResearch.com. © 2010 George Fairbanks
+
+References
+
+[1] Muhammad Ali Babar. An exploratory study of architectural practices and challenges in using agile software development approaches. Joint Working IEEE/IFIP Conference on Software Architecture 2009 & European Conference on Software Architecture 2009, September 2009.
+
+[2] Mario R. Barbacci, Robert Ellison, Anthony J. Lattanze, Judith A. Stafford, Charles B. Weinstock, and William G. Wood. Quality attribute workshops (qaws), third edition. Technical report, Software Engineering Institute, Carnegie Mellon University, 2003.
+
+[3] Len Bass, Paul Clements, and Rick Kazman. Software Architecture in Practice. AddisonWesley, second edition, 2003.
+
+[4] Marvin J. Carr, Suresh L. Konda, Ira Monarch, F.Carol Ulrich, and Clay F. Walker. Taxonomy-based risk identification. Technical Report CMU/SEI-93-TR-6, Software Engineering Institute, Carnegie Mellon University, June 1993.
+
+[5] Viktor Clerc, Patricia Lago, and Hans van Vliet. The architect's mindset. Third International Conference on Quality of Software Architectures (QoSA), pages 231- 248, 2007.
+
+[6] George Fairbanks. Just Enough Software Architcture: A Risk-Driven Approach. Marshal and Brainerd, 2010. E-book available from rhinoresearch.com.
+
+[7] Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. Design Patterns: Elements of Reusable Object-Oriented Software (Addison-WesleyProfessional Computing Series). Addison-Wesley Professional, 1995.
+
+[8] Michael Jackson. Software Requirements and Specifications. Addison-Wesley, 1995.
+
+[9] Michael Jackson. Problem Frames: Analyzing and Structuring Software Development Problems. Addison-Wesley, 2000.
+
+[10] Henry Petroski. Design Paradigms: Case Histories of Error and Judgment in Engineering. Cambridge University Press, 1994.
+
+[11] George Polya. How to Solve It: A New Aspect of Mathematical Method (Princeton Science Library). Princeton University Press, 2004.
+
+[12] Douglas Schmidt, Michael Stal, Hans Rohnert, and Frank Buschmann. Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects. Wiley, 2000.
+
+[13] Mary Shaw and David Garlan. Software Architecture: Perspectives on an Emerging Discipline. Prentice-Hall, 1996.
+
+Software Architecture Articles
+
+Strategic Modeling for Rapid Delivery of Enterprise Architecture
+
+When Good Architecture Goes Bad
+
+Agile Knowledge
+
+Scrum Expert
+
+Agile Tutorials and Videos
+
+Software Architecture Books
+
+Documenting Software Architectures
+
+The Process of Software Architecting
+
+More Software Architecture Knowledge
+
+UMLZone.com - Unified Modeling Language (UML), Software Architecture and Data Modeling
+
+Click here to view the complete list of archived articles
+
+This article was originally published in the Spring 2012 issue of Methods & Tools
+
+Methods & Tools
+is supported by
+Testmatick.com
+Software Testing
+Magazine
+The Scrum Expert
+Browse a selected list of upcoming Software Development Conferences
+Discover the best available Open Source Project Management Tools (Gantt, Scrum, Kanban)
+Explore a list of Free and Open Source Scrum Tools for Agile Software Project Management
+
+Copyright © by 1995-2024 Martinig & Associates | Privacy
+Follow Methods & Tools on  Twitter    LinkedIn    Facebook
