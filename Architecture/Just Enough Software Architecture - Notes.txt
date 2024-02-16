@@ -1,0 +1,24 @@
+Foreword
+- Two camps - maximizing and minimizing software architecture
+- Some people the architecture is obvious for the 'class of system'
+- The central question: How much explicit architectural design should one carry out for a given system?
+	- This book proposes 'Just Enough Architecture'
+- How to determine how much architecture is needed is risk reduction
+
+Introduction
+- Partitioning, Knowledge, Abstraction
+- Divide parts are small enough that they can be solved
+- Must be able to reason about how parts assemble
+- Parts that are encapsulated are easy to reason about, because you can ignore internal details
+- Knowledge of prior problems to help solve current ones
+- Abstraction shrinks problems, and smaller problems are easier to reason about
+
+- You should not expect any silver bullets that will eliminate the difficulties of software development
+- Look for weapons that help you partition, provide knowledge, and enable abstraction to reveal the essence of the problem
+- Software architecture is one such weapon, and it can help address complexity and scale of software systems
+- A tool in the hands of a skilled developer
+
+- Architecture is the macroscopic design of a software system
+- Quality attributes usually trade off against each other
+- maximizing one usually means settling for less of the others
+- the coach has a head start because of the conceptual model he carries in his head, that helps him make sense of what he sees
