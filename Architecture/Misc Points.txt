@@ -1,0 +1,6 @@
+To quote the late Stefan Tilkov:
+
+"Architecture is a property of a system, not a description of its intended design."
+
+If your development process is focused on discussing and passing around descriptions of the thing you want to build, but you're not actually building, 
+testing and learning from it, then rather than being focused on architecture, your process is studiously (and bureaucratically) avoiding it.
