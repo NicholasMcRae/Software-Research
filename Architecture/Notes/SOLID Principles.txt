@@ -123,3 +123,7 @@ THANK YOU. I've been a professional developer for 25 years. In the last few year
 This replaces the "old" way of writing bad code (monoliths & spaghetti code). I appreciate that SOLID is trying to address those issues. Abstraction and encapsulation are important. I just think this framework is WAY too academic and overwrought. It is often confusing about what exactly it means, leading to some really extreme interpretations, especially around interfaces and class scope.
 
 Abstract code that repeats. Don't cross abstraction boundaries. Encapsulate into sensible logical units. Use interfaces for classes with common partial data contracts. But please don't go on a puritanical crusade and demand everything be abstracted to the nth degree and wrapped in endless single-use interfaces. That helps nobody and makes the code both unreadable and unscalable.
+
+************************************
+
+https://towardsdatascience.com/why-solid-principles-are-not-a-solid-solution-for-software-design-fa71b6017ed6
