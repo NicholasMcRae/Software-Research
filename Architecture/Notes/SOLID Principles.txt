@@ -113,3 +113,13 @@ Use sane boundaries for your code.
 Use the right level of coupling—keep things together that belong together, and keep them apart if they belong apart.
 
 - Research on dependencies
+
+***********************************
+
+https://www.reddit.com/r/programming/comments/5qto27/why_every_element_of_solid_is_wrong/
+
+THANK YOU. I've been a professional developer for 25 years. In the last few years, I've started to see this new kind of "bad code" creep into my clients' code bases. It's WAY over-abstracted, convoluted, and a complete mess. Usually even the original developer (when they are still around) can't make sense of it.
+
+This replaces the "old" way of writing bad code (monoliths & spaghetti code). I appreciate that SOLID is trying to address those issues. Abstraction and encapsulation are important. I just think this framework is WAY too academic and overwrought. It is often confusing about what exactly it means, leading to some really extreme interpretations, especially around interfaces and class scope.
+
+Abstract code that repeats. Don't cross abstraction boundaries. Encapsulate into sensible logical units. Use interfaces for classes with common partial data contracts. But please don't go on a puritanical crusade and demand everything be abstracted to the nth degree and wrapped in endless single-use interfaces. That helps nobody and makes the code both unreadable and unscalable.
