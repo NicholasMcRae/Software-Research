@@ -1,4 +1,5 @@
-Characteristics of Software Architecture : Architects separate architecture characteristics into broad categories depending upon operation, rarely appearing requirements, structure etc. Below some important characteristics which are commonly considered are explained.
+Characteristics of Software Architecture : Architects separate architecture characteristics into broad categories depending upon operation, 
+rarely appearing requirements, structure etc. Below some important characteristics which are commonly considered are explained.
 
 Operational Architecture Characteristics :
 Availability
