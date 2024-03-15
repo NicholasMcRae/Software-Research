@@ -1,1 +1,1 @@
-Miscellaneous software research, notes on various books, documentation, and tutorials.
+Research that's currently focused on software architecture and best practices
