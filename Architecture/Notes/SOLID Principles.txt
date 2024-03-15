@@ -56,3 +56,60 @@ https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
 	- These two principles are indeed related and we have applied this pattern while discussing the open closed principle
 	- We want our classes to be open to extension, so we have reorganized our dependencies to depend on interfaces instead of concrete classes
 	- PersistenceManager class depends on InvoicePersistence instead of classes that implement that interface
+	
+***************************************
+
+Why SOLID principles are still the foundation for modern software architecture
+
+https://stackoverflow.blog/2021/11/01/why-solid-principles-are-still-the-foundation-for-modern-software-architecture/
+
+- As a whole, the SOLID principles make arguments for how code should be split up, which parts should be internal or exposed, and how code should use other code
+- I'll dive into each letter below and explain it's original meaning, as well as an expanded meaning that can apply outside of OO programming
+
+What has changed?
+	- In the early 2000s Java and C++ were king
+	- Since then the changes in the software industry have been profound
+		- Dynamically typed languages - Python, Ruby, and JS
+		- Non-object oriented paradigms - functional programming
+		- Open source software - common for your dependencies to be open source
+			- The kind of logic and data hiding that used to be imperative when writing a library is no longer as important
+		- Microservices and saas - much more common to deploy a small service that talks to other services, either your own or powered by a third party
+	- Taken as a whole, many of the things that SOLID really cared about, such as classes and interfaces, data hiding and polymorphism 
+		- Are no longer things that programmers deal with every day
+		
+What hasn't changed?
+	- there are some things that haven't changed and likely won't
+	- Code is written and modified by people	
+		- There will always be a need for well-documented code, particularly well documented APIs, whether internal or external
+	- Code is organized into modules
+		- In some languages these are classes, in others they may be individual source files
+		- In JS they may be exported objects
+		- Regardless, there exists some way of separating and organizing code into distinct, bounded units
+		- There will always be a need to decide how best to group code together
+	- Code can be internal or external
+		- some code is written to be used by yourself or your team. Other code is written to be used by other teams
+		- Needs to be some way to decide what code is visible and what is hidden
+
+Modern SOLID
+	- In the following sections I will restate each of the principles into a more general statement that can apply to OO, FP, or multi-paradigm programming
+	- SRP
+		- Each module should do one thing and do it well
+	- OCP
+		- You should be able to use and add to a module without re-writing it
+	- LSP
+		- You should be able to substitute one thing for another, if those things are declared to behave the same way
+	- ISP
+		- Don't show your clients more than they need to see
+	- DIP
+		- Depend upon abstractions, not concretions
+		
+Conclusion
+To restate "modern SOLID" one more time:
+
+Don't surprise the people who read your code.
+Don't surprise the people who use your code.
+Don't overwhelm the people who read your code.
+Use sane boundaries for your code.
+Use the right level of coupling—keep things together that belong together, and keep them apart if they belong apart.
+
+- Research on dependencies
