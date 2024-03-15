@@ -1,0 +1,15 @@
+https://cloud.google.com/blog/topics/developers-practitioners/best-practices-dependency-management
+
+	- steps to reduce your dependency footprint and make it reproducible.
+	
+https://phoenixnap.com/blog/software-dependencies
+
+	Use Best Practices
+	Dependency management is a continuous maintenance process with constant room for improvement. Embrace the best practices when managing dependencies:
+
+	Review regularly. Perform periodic reviews of existing dependencies to ensure no unnecessary, outdated, or vulnerable components are present.
+	Maintain security. When picking out dependencies, choose those that are actively maintained and have a strong security record.
+	Keep it minimal. Using fewer dependencies also means fewer security risks and simpler code. Use only essential dependencies.
+	Uphold documentation. Update documentation regularly with the current dependency information. Keep track of names, versions, and sources to simplify collaboration and project details.
+	Integrate with CI/CD. Add dependency management to the CI/CD pipeline to automate these tasks efficiently and securely.
+
