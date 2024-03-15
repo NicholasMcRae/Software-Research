@@ -1,0 +1,58 @@
+https://www.freecodecamp.org/news/solid-principles-explained-in-plain-english/
+
+- Set of rules and best practices to follow while designing a class structure
+- Help us understand the need for certain design patterns and software architecture in general
+- First introduced by Robert Martin in a paper in 2000
+- Author of Clean Code and Clean Architecture
+- They all serve the same purpose
+	- To create understandable, readable, and testable code that many developers can collaboratively work on 
+	
+- The Single Responsibility Principle
+	- a class should do one thing, and should only have one reason to change
+	- only one potential change (db logic, logging logic etc) in specification should be able to affect the class
+	- many different teams can work on the same project, this could lead to incompatible modules
+	- makes version control easier - by following SRP we know a commit is related to the module
+	- fewer merge conflicts
+	- A few examples
+		- Should not have printing logic mixed with business logic
+		- Should not mix persistence logic with business logic
+		- So we create new classes for our printing and persistence logic
+		
+- Open-Closed Principle
+	- Classes should be open for extension and closed to modification
+	- Modification means changing the code of an existing class, and extension means adding new functionality
+	- We should be able to add new functionality without touching the existing code for the class
+	- Whenever we modify the existing code, we are taking the risk of creating potential bugs
+	- So we should avoid touching the tested and reliable production code if possible
+	- How are we going to add new functionality without touching the class?
+		- Usually done with interfaces and abstract classes
+	- In example, if we obeyed open-closed principle, we would not need to change this class
+		- We change the type InvoicePersistence to interface, and add a save method
+		- Interface ensures that our two persistence methods implement a save method, from interface InvoicePersistence
+		- Now our persistence logic is easily extendable
+	- You may think that we could just create multiple classes without an interface and add a save method to all of them
+	- But let's say that we extend our app and have multiple persistence classes, that manage all persistence classes
+	- We can now pass any class that implements the InvoicePersistence interface to this class with the help of polymorphism
+	- This is the flexibility that interfaces provide
+	
+- Liskov Substitution Principle
+	- States that subclasses should be substitutable for their base classes
+	- We should be able to pass an object of class B to any method that expects class A, and the method should work
+	- The child class extends the behavior but never narrows it down
+	- In the example we overrode the getters and setters in the child, which violated the principle
+
+- Interface Segregation Principle
+	- Segregation means keeping things separated, this principle is about separating the interfaces
+	- Principle states that many client-specific interfaces are better than one general purpose interface
+	- Clients should not be forced to implement a function they do not need
+	- Example, parking lot interface is too specific, which forced the FreeParking class to implement payment-related methods that are irrelevant
+	- Let's separate or segregate the interfaces
+	- With new model we can even go further and split the PaidParkingLot to support different types of payment
+	- Now our model is much more flexible, extendable, and the clients do not need to implement any irrelevant logic
+	
+- Dependency Inversion Principle
+	- Our classes should depend upon interfaces or abstract classes instead of concrete classes and functions
+	- If the Open Closed Principle states the goal of OO architecture, the dependency inversion principle states the primary mechanism
+	- These two principles are indeed related and we have applied this pattern while discussing the open closed principle
+	- We want our classes to be open to extension, so we have reorganized our dependencies to depend on interfaces instead of concrete classes
+	- PersistenceManager class depends on InvoicePersistence instead of classes that implement that interface
