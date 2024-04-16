@@ -1,0 +1,29 @@
+https://www.ibm.com/topics/api
+
+- An API is a set of rules or protocols that enables software applications to communicate with each other to exchange data, features, and functionality
+- Allow developers to integrate data, services, and capabilities from other applications
+- Give application owners a simple, secure way to make their application data and functions available to departments within their organization
+- Application owners can also share or market data and functions to business partners or third parties
+- Allow for the sharing of only the necessary information, keeping internal system details hidden, which helps with system security
+- Servers or devices do not have to fully expose data
+
+How do APIs work?
+- It's useful to think about API communication in terms of a request and response between a client and server. The application submitting the request is the client, and the server provides the response.
+- The API is the bridge establishing the connection between them
+- When the buyer clicks the payment button, an API call is sent to retrieve information. This is the request. he request is processed from an application to the web server through the APIs Uniform Resource Identifier (URI), and includes a request verb, headers, and sometimes a request body
+- After receiving a valid request from the webpage, the API calls to the external program or web server, in this case the third party payment system
+- The server sends a response to the API with the requested information
+
+Types of APIs
+- Data or Database APIs - used to connect applications and database management systems
+- Operating System (local) APIs - used to define how apps use operating system services and resources
+- Remote APIs - used to define how applications on different devices interact
+- Web APIs - used to enable data and functionality transfer over the internet using HTTP protocol
+
+- Today, most APIs are web APIs. Web APIs are a type of remote API, meaning that the api uses protocols to manipulate external resources, that expose an pplications data and functionality over the internet
+
+Four main types of web APIs are:
+- Open API - open source APIs you can access with the HTTP protocol. Also known as public APIs, they have defined API endpoints and request and reponse formats
+- Partner APIs - connect strategic business partners
+- Internal APIs  - private, remain hidden from external users. These private APIs aren't available for users outside of the company
+- Composite APIs - combine multiple data or service APIs. They allow programmers to access several endpoints in a single call. Useful in microservice architecture where running a single tas might require information from several sources
