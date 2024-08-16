@@ -1,7 +1,7 @@
 General principles
 ******************
 
-- The phrase "iterative software development" suffers from the same drawback as "evidence-based medicine" in that it suggests there may be rational alternatives
+The phrase "iterative software development" suffers from the same drawback as "evidence-based medicine" in that it suggests there may be rational alternatives
 
 ******************
 
@@ -13,3 +13,7 @@ If your development process is focused on discussing and passing around descript
 testing and learning from it, then rather than being focused on architecture, your process is studiously (and bureaucratically) avoiding it.
 
 *******************
+
+The factors in software reliability and maintainability are the same
+	- Reducing the interdependence between different commponents or modules of a software system
+	- Makes codes more testable, and easier to update
