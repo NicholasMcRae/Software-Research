@@ -1,0 +1,113 @@
+- Refactoring is the process of changing a software system in such a way that it does not alter the external behavior of the code, yet improves it's internal structure
+- Disciplined way to clean up code that minimizes the chances of introducing bugs
+- Improving the design after it has been written
+	- In current understanding we believe that we design and then we code
+	- The code slowly sinks from engineering to hacking
+- Refactoring is the opposite of this practice
+	- Take a bad design, chaos even, and re-work it into well designed code
+- You find design occurs continuously during development
+- You learn from building the system how to improve the design
+- You will learn to refactor in such a way that you don't introduce bugs into the code but instead methodically improve the structure
+- For all of this book I use examples in Java
+- Two of the leading proponents of refactoring are Ward Cunningham and Kent Beck
+
+Chapter 1
+- The first step
+	- Need to build a solid set of tests for that section of code
+	- Tests are essential because we're still human and still make mistakes
+	- Thus, need solid tests
+	- It is vital to make tests self-checking, if you don't you end up spending time hand checking some numbers
+		- Slows you down
+	- Relying on tests to tell me whether I introduce a bug
+	- It is essential for refactoring that you have good tests
+	- It's worth spending the time to build the tests, because the tests give you the security you need to change the program later
+	- This is so important it's Chapter 4
+
+- Decomposing and Redistributing the Statement Method
+	- The first target of attention is the overly long statement method
+	- Looking to decompose the method into smaller pieces
+	- Smaller pieces of code tend to make things more manageable
+	- They are easier to work with and move around
+	- Aim is to make it easier to write an HTML statement method with much less duplication of code
+	- Switch statement looks like a good chunk to extract into its own method
+	- Need to do it safely
+	- Need to look in the fragment for any variables that are local in scope to the method we are looking at, local variables and parameters
+	- Has two: each is not modified by the code but thisAmount is modified
+	- Any non-modified variable I can pass in as a parameter
+	- Modified variables need more care
+		- If there is only one, I can return it
+	- Whenever I make a change like this, I compile and test
+	- Smalltalk, the refactoring browser. With this tool refactoring is very simple, just highlight the code, pick extract method, type in a method name, and it's done
+	- Now that I've broken the original method down into chunks I can work on them separately
+	- I don't like some of the variable names in amountFor, and this is a good place to change them
+	- Is renaming worth the effort?
+	- Absolutely, good code should communicate what it is doing clearly, and variable names are a key to clear code
+	- Code that communicates its purpose is very important
+	
+	- Moving the Amount Calculation
+	- Uses information from rental, but does not use information from Customer
+	- This immediately raises my suspicions that the method is on the wrong object
+	- In most cases, a method should be ont he object whose data it uses
+	- thus the method should be moved to the rental
+	- In this case, fitting into its new home means removing the parameter, I also renamed the method as I did the move
+	- Can now compile and test to see whether I've broken anything
+	- The next step is to find every reference to the old method and adjust the reference to use the new method as follows
+	- In this case the step is easy because we just created the method and it is in only one place
+	- Now we have to remove the old method
+		- Sometimes I leave the old method to delegate to the new method, this is useful if it is a public method and I don't want to change the interface of the other class
+	- Now I notice that the variable thisAmount is redundant, so I can replace it with the function call of getcharge()
+	- I like to get rid of temporary variables such as this as much as possible, often a problem in that they cause a lot of parameters to be passed around when they don't have to be
+	- You can easily lose track of what they are there for
+	- They are particularly insidious in long method
+	- There is a performance price to pay, the charge is now calculated twice, but it is easy to optimize that in the rental class
+	
+	- Extracting Frequent Renter Points
+	- Seems reasonable to put the responsibility on the rental
+	- First we need to use Extract Method on the frequent retner points part of the code
+	- Each is used and can be passed in as a parameter, the other temp used is frequentRenterPoints
+		- Does have a value beforehand
+		- The body of the extracted method doesn't read the value, so we don't need to pass it in as a parameter
+	- With refactoring, small steps are the best, that way less tends to go wrong
+	
+	- Removing Temps
+	- Temporary variables can be a problem
+	- The other concern with this refactoring lies in performance-
+	- The old code executed the while loop once
+	- A while loop that takes a long time might impair performance
+	- Many programmers would not do this refactoring simply for this reason
+	- Note words if and might
+	- Until I profile I cannot tell how much time is needed for the loop to calculate or whether the loop is called often enough for it to affect overall performance
+	- Don't worry about this while refactoring, when you optimize you will have to worry about it
+	- But you will then be in a much better position to do something about it
+	- Now I can write the htmlSTatement
+	- If the calculation rules change I have only one place in the code to go to
+	- Any other kind of statement will be really quick and easy to prepare
+	
+	- Replacing the conditional logic on price code with polymorphism
+	- It is a bad idea to do a switch based on an attribute of another object
+	- If you must use a switch statement, it should be on your own data, not on someone else's
+	- This implies that getCharge should move onto movie
+	
+	- Inheritance
+	- We have several types of movie that have diffferent ways of answering the same question
+	- Sounds like a job for subclasses
+	- Now completed the second major refactoring, it is going to be much easier to change the classification structure of movies, and to alter the rules for charging 
+	
+	- The most important lesson from this example is the rhythm of refactoring: test, small change, test, small change, test, small change
+	
+Chapter 2 - Principles in Refactoring
+	- The previous example should give you a feel for what refactoring is all about
+	- Now it's time to step back and look at the key principles of refactoring and at some of the issues you need to think about when refactoring
+	- Refactoring has two definitions depending on context
+	- As a noun or a verb
+	- Refactoring goes further than just clean up because it provides a technique for cleaning up code in a more efficient and controlled manner
+	- Know which refactorings to use
+	- Know how to minimize bugs, and test at every possible opportunity
+	- The purpose of refactoring is to make the software easier to understand and modify
+	- Only alters the internal structure
+	- Refactoring does not change the observable behavior of the software
+	- Refactoring improves the design of software
+	- Without refactoring, the design of the program will decay
+	- Code can lose it's structure
+	- Refactoring makes software easier to understand
+	- The third time, you refactor (once you find yourself duplicating code often)
