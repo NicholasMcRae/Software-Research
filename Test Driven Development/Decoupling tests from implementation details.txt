@@ -1,0 +1,24 @@
+https://medium.com/codex/decoupling-tests-from-implementation-details-238a9ab06e4f
+
+- Tests should aim to define what is intended (behavior), now how it's implemented (details)
+- Write your tests in such a way that as many implementation details as possible could be changed before a change to the test code itself is required.
+- Don't change your code for the sake of testing
+- don't test all classes, functions and method
+- target, describe, exercise the business needs, not the technical aspects
+- tests should be sensitive to behavior change, not code structure or details
+- the best way to ensure this is by testing through APIs only
+	- APIs are stable, precise, and predictable
+	- Changes in APIs are good reasons for tests to fail because business changes drive them
+	- tests should talk solely through APIs and only be aware of their concepts (operations and data types)
+	- your tests are coupled to API contracts, the less volatile aspect of the code base
+	️ Don’t rely on constants and variables that belong to the implementation (e.g., configurations) in your tests (inject them instead).
+	️ While testing a web page, classes, tags, and identifiers are implementation details (creating test identifiers is an antipattern because you’re adding code for the sake of testing); instead, consider the Testing Library approach.
+	️ Tests should not be aware of external non-deterministic things such as the system clock or environment variables. In lower-level testing, the implementation should allow their injection for clarity and determinism. In acceptance testing, tests shouldn’t even know about them.
+	️ Don’t test utilities; they are secondary things and are supposed to be tested only indirectly.
+	️ The database is a technical detail, not an API. It should be hidden behind the implementation code.
+Conclusion
+In a nutshell, here’s what I proposed:
+
+Use only APIs (internal or external) to bridge tests and implementation;
+Consistently use a subset of the available APIs in tests;
+Reduce the implementation’s surface area: make everything private by default and strive for cohesive and deep APIs.
