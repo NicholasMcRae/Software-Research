@@ -110,4 +110,119 @@ Chapter 2 - Principles in Refactoring
 	- Without refactoring, the design of the program will decay
 	- Code can lose it's structure
 	- Refactoring makes software easier to understand
+	- Refactoring helps you find bugs
+	- Refactoring helps you program faster
 	- The third time, you refactor (once you find yourself duplicating code often)
+	- The most common time to refactor is when I want to add a new feature to some software
+		- When I want to understand the code
+		- Or if the design doesn't help me add a feature easily
+	- Refactor when you need to fix a bug
+	- Refactor as you do a code review
+	- The idea of active code review is taken to its limit with Extreme Programming practice of Pair Programming
+	- All serious development is done with two developers at one machine
+	- Want to structure in a code that makes changes later easier
+	- Poor structure makes software hard to modify
+	- What do I tell a manager? If they like quality it's easy, if not sometimes don't tell
+	- Problems with refactoring
+		- Databases, applications are tightly coupled, difficult to change
+		- Changing interfaces
+	- When shouldn't you refactor?
+		- when you should rewrite from scratch instead, the existing code is such a mess that although you could refactor, it would be easier to start from the beginning
+		- A re-write is needed when the current code just does not work
+		- Code has to work mostly correctly before you refactor
+		- Also when you are close to a deadline
+			- It's important to manage debt
+	
+	- Refactoring and Design 
+		- Many consider design to be the key piece and programming just mechanics
+		- One argument is that refactoring can be an alternative to upfront design
+		- You don't do any design at all, you just code the first approach that comes, get it working, and then refactor it into shape
+		- This approach can work, XP Kent Beck advocate this approach
+		- Even the extreme programmers do some design first, want a plausible first solution
+		- If you don't refactor, there is a lot of pressure in getting that upfront design right
+		- The sense is that any changes to the design later are going to be expensive
+		- With refactoring all you want is a reasonable solution, with refactoring not a problem because it is no longer expensive to make the change
+		- Greater movement toward simplicity of design
+		- Flexible solutions are more complex than simple ones, they cost
+		- The resulting software is more difficult to maintain in general
+		- To gain flexibility you are forced to put in a lot more flexibility than you actually need
+		- With refactoring you still think about potential changes, still consider flexible solutions
+		- But instead of implementing these flexible solutions, you ask: how difficult is it going to be to refactor a simple solution into the flexible solution?
+		- if it's pretty easy then you just implement the simple solution
+		- Once you have a broad sense of things that refactor easily, you don't even think of the flexible solutions
+		- You have the confidence to refactor if the time comes
+		
+		- Refactoring and Performance
+		
+Chapter 3: Bad Smells in Code
+	- Deciding when to start and when to stop is just as important as knowing how to operate the mechanics of refactoring
+	- Duplicated code
+		- if you see same code structure in more than one place, you can be sure that your program will be better if youf ind a way to unify them
+		- when you have the same expression in two sibling subclasses
+		- if you have duplicated code in two unrelated classes, consider using extract class
+	- Long Method
+		- the object programs that live best and longest are those with short methods
+		- little methods are valuable
+		- the longer a procedure is, the more difficult it is to understand
+		- should be much more aggressive about decomposing methods
+			- whenever we feel the need to comment something, we write a method instead
+			- can do on a group of lines or even a single line of code
+		- if you have a method with lots of parameters and temporary variables, these elements get in the way of extracting methods
+		- Comments often signal this kind of semantic didstance
+	- Large Class
+		- when a class is trying to do too much
+		- a class with too much code is prime breeding ground for duplicated code, chaos, and death
+		- the simplest solution is to eliminate redundancy in the class itself
+	- Long Parameter List
+	- Divergent Change
+		- Occurs when one class is commonly changed in different ways for different reasons
+	- Shotgun Surgery
+		- When every time you make a kind of change,y ou have to make a lot of little changes to a lot ot different classes
+	- Feature Envy
+		- points of objects is that they are a technique to package data with the processes used on that data
+		- a classic smell is a method that seems more interested in a class other than the one it is actually in
+	- Data Clumps
+		- Bunches of data that hang around together really ought to be made into their own object
+		- A good test is to consider deleting one of the data values, if you did this, would the others make any sense?
+	- Primitive Obsession
+		- People new to objects are usually reluctant to use small objects for small tasks
+		- You can move out of the cave into the centrally heated world of objects by using replace data value with object
+	- Switch Statements
+		- Often you find the same switch statements scattered about a program in different places
+		- If you add a new clause to the switch, you ahve to find all these switch statements and change them
+		- Most times you swee a switch statement you should consider polymorphism
+	- Parallel Inheritance Hierarchies
+		- Every time you make a subclass of one class you also have to make a subclass of another
+	- Lazy Class
+		- If you have subclasses that aren't doing enough, try to use collapse hierarchy. Nearly useless components should be subjected to inline class
+	- Speculative Generality
+		- Handling cases that don't exist
+		- The result is often harder to understand and maintain
+		- The machinery just gets in the way, so get rid of it
+	- Temporary Field
+		- Instance variable is set only in certain circumstances
+	- Message Chains
+		- Message chains, client is coupled to the structure of the navigation
+		- Any change to the intermediate relationships causes the client to have to change
+	- Middle Man
+		- You look at a class's interface and find half the methods are delegating to this other class
+	- Inappropriate intimacy
+		- Classes become far too intimate and spend too much time delving in each other's private parts
+	- Alternative Classes with Different Interfaces
+	- Incomplete Library Class
+	- Data Class
+		- Such classes are dumb data holders and are almost certainly being manipulated in far too much detail by other classes
+	- Refused Bequest
+		- 
+		
+ Chapter 4: Building Tests
+	- If you want to refactor, the essential precondition is having solid tests
+	- Make sure all tests are fully automatic and that they check their own results
+	- A suite of tests is a powerful bug detector that decapitates the time it takes to find bugs
+	- JUnit Testing Framework
+	- Unit vs Functional Tests
+	- When you get a bug report, start by writing a unit test that exposes the bug
+	- Adding More Tests
+		- Look at all the things the class should do and test each one of them for any conditions that might cause the class to fail
+		- Testing should be risk driven, you are trying to find bugs now or in the future
+		- You don't test accessors that just read and write a field
