@@ -232,3 +232,14 @@ Chapter 5. Toward a Catalog of Refactorings
 - They've grown from the notes I've made in refactoring over the last few years
 - Finding References
 	- Many refactorings call for you to find all references, when you do enlist the computer to help you
+	
+Chapter 6: Composing Methods
+- Almost all the time the problems come from methods that are too long
+	- Contain lots of information, which gets buried by complex logic that usually gets dragged in
+	- Key refactoring is Extract Method, takes a clumb of code and turns it into its own method
+	- inline method is the opposite
+- Get rid of temporary variables
+- Parameters are less of a problem than temps provided you don't assign to them. If you do, you need remove assignments to parameters
+- Extract method is one of the most common refactorings I do
+- Prefer well-named methods for several reasons, increases the chances that other methods can use a method when the method is finely grained
+- Allows higher-level methods to read more like a series of commands
