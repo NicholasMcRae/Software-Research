@@ -226,3 +226,9 @@ Chapter 3: Bad Smells in Code
 		- Look at all the things the class should do and test each one of them for any conditions that might cause the class to fail
 		- Testing should be risk driven, you are trying to find bugs now or in the future
 		- You don't test accessors that just read and write a field
+		
+Chapter 5. Toward a Catalog of Refactorings
+- Chapters 5 to 12 form an initial catalog of refactorings
+- They've grown from the notes I've made in refactoring over the last few years
+- Finding References
+	- Many refactorings call for you to find all references, when you do enlist the computer to help you
