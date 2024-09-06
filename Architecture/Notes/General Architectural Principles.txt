@@ -35,3 +35,7 @@ In software design, if we want to avoid creating a big ball of mud, we aim to pu
 In organisational design, aim to put the decision-making power where the knowledge required to make that decision is.
 
 When I see a situation where people are having to explain to the person making the decision what they need to know, I see the equivalent of "Feature Envy". Call it "Knowledge Envy".
+
+*******************
+
+Sometimes the fear of change hurts more than the certainty of a painful status quo. Expecting someone to change at that moment is silly. Either the fear has to go down or the status quo has to get worse first.
