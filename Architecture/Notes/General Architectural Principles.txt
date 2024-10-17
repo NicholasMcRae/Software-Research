@@ -39,3 +39,25 @@ When I see a situation where people are having to explain to the person making t
 *******************
 
 Sometimes the fear of change hurts more than the certainty of a painful status quo. Expecting someone to change at that moment is silly. Either the fear has to go down or the status quo has to get worse first.
+
+*******************
+
+I did an exercise yesterday where I jotted down things that I think have made a positive difference to the way I write software on index cards, and then went through a "is greater than" process to sort them into order of impact.
+
+Top 5:
+
+1. Iterative & incremental development
+
+2. Usage-driven design
+
+3. Continuous testing
+
+4. Continuous integration
+
+5. Separation of concerns
+
+That is to say, these are the 5 foundational properties of any methodology I'd consider to be workable.
+
+And what's really interesting is that TDD ticks the first 3 boxes just by itself. It highly iterative & incremental, it drives design from usage cases, and testing's  going on throughout.
+
+If your tests are agreed with your customer, then just add CI, and a generous spoonful of "things that change together belong together", and you've got yourself a development methodology.
