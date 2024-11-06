@@ -61,3 +61,7 @@ That is to say, these are the 5 foundational properties of any methodology I'd c
 And what's really interesting is that TDD ticks the first 3 boxes just by itself. It highly iterative & incremental, it drives design from usage cases, and testing's  going on throughout.
 
 If your tests are agreed with your customer, then just add CI, and a generous spoonful of "things that change together belong together", and you've got yourself a development methodology.
+
+*******************
+
+"You could read *all* of the books about software architecture, and I'd wager more than 90% of it boils down to coupling and cohesion at various scales"
