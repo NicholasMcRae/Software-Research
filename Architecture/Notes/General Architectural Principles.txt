@@ -65,3 +65,7 @@ If your tests are agreed with your customer, then just add CI, and a generous sp
 *******************
 
 "You could read *all* of the books about software architecture, and I'd wager more than 90% of it boils down to coupling and cohesion at various scales"
+
+*******************
+
+Law of Demeter - https://en.wikipedia.org/wiki/Law_of_Demeter
