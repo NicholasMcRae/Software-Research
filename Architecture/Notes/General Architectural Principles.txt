@@ -69,3 +69,9 @@ If your tests are agreed with your customer, then just add CI, and a generous sp
 *******************
 
 Law of Demeter - https://en.wikipedia.org/wiki/Law_of_Demeter
+
+******************
+
+A useful definition of "software architecture" is software design decisions that are difficult to change later. So, taking that as the foundation, I'm going to offer a definition of "software design": 
+
+Minimising software architecture.
