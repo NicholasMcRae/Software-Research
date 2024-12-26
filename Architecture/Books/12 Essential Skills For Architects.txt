@@ -1,0 +1,66 @@
+- Gracious Behavior
+    - relationships over correctness
+    - reviewing work - contingent on who's receiving review
+    - Be prepared to accept feedback and be willing to change
+    - Don't defend
+    - Be gracious / Graciously accept feedback
+    - If someone is strongly disliked, it's almost irrelevant whether or not they are competent
+    - If someone is liked, colleagues will seek out every little bit of competence he has to offer
+    - People who exhibit caustic behavior in an organization will foster an environment in which open communication is minimized, trust is lowered, and anxiety rises
+    - The productivity of the team drops, and quality solutions dwindle
+    - Eventually caustic individuals are removed from the organization
+    - Learning to project behaviors, actions, and words we want reflected back to us is a critical concept
+    - Integrity and honesty without bluntness
+    - Try not to offend people with bluntness
+    - Don't be so cautious and sugar coat message so needed information is never delivered **
+    - Don't bury issues
+    - Learn to smile / posture / be approachable
+    - Learn to focus on others, not yourself
+    - Learn to be helpful. What are the other person's needs? How can you best help?
+
+- Communication
+    - To listen well is as powerful a means of communication and influence as to talk well
+    - Business people need to listen at least as much as they need to talk
+    - Role of architect, communcation is the essential skill and tool that is required to be effective
+    - Listen first, be there, be positive, apologize early, avoid feeding frenzy on imperfections
+    - Prefer yes over no, we are not looking for ways to say no, but we can build this other project **
+    - As architects we need to look for ways to say yes
+    - If it isn't feasible we need to say so tactfully  
+    - Analyze priority and weigh tasks against each other
+    - Help elicit needs and seek a solution that provides the highest value to others at the lowest cost
+    - Reserve your no for special occasions
+    - Be prepared to explain rationale of saying no
+    - Can say no if you're defying the laws of physics, but not because you don't want to
+    - If at all possible try to avoid saying the word no, explain the rationale given the context
+    - Don't get defensive
+    - If you can avoid personalizing the conversation your ability to hear increases
+    - Learn others communication needs
+    - It is essential to watch for key moments where decisions can be made, to recognize issues or concerns that are arising **
+    - Core concepts that can help you focus the direction of the meeting and enable it to draw to a successful conclusion **
+    - Need to take all info, verbal and non-verbal
+    - Be prepared for questions to be asked at any time
+        - What is the person's context? **
+        - What info do they need to know?
+        - Business rationale / cohesive picture of what your answer is trying to communicate. Organizational impacts of what you are about to say? How will other groups respond?
+    - If a decision makes everyone slightly unhappy, innovative solutions may arise
+    - Executives
+        - Executives thrive on trust, loyalty, and consistency
+        - The information you present needs to be consistent
+        - Do not roast other people who aren't in the room
+        - Be sure the story you're telling is one you want repeated, so others aren't blindsided
+        - As a general rule of thumb, the amount of detailed information needed is inversely proportional to the person's level in the organization
+        - Executives will only need high-level summary type information about a project during a regular status update
+        - Executives are likely to not care about all of the technical information, don't have time
+        - Want to know which risks exist that may cause the project to not be delivered on time and on budget? Are these risks being managed?
+        - Which strategic assets are being created that can be leveraged for current or future projects?
+        - Who are the rising stars within the organization?
+        - Executives demand that you give them accurate information, they expect you to be consistent
+        - Be clear that you don't know, if you don't know something
+        - Put your cards on the table and let them see everything
+        - You want to establish a critical relationship
+        - They don't want to know about conflicts
+        - Don't surprise executives / don't want to act in a very short span of time
+        - Most project risks brew slowly, buzz about risks may not always rise to those who need to hear it
+        - Risks need to be exposed early, intermediate managers want to craft message
+        - You are better exposing the risk early **
+        - Sometimes you need to go to execs directly, but make sure everyone below has been informed first
