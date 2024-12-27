@@ -132,3 +132,68 @@
 	- Believe in what you are selling
 	- Don't stick your nose where it doesn't belong and is not welcome
 	- Forge relationships
+
+- Transparency
+    - The things that you and others fail to disclose are potential landmines for a project's ability to succeed, they will erode trust
+    - Transparency is a key soft skill
+    - As an architect your weaknesses and strengths become visible
+    - Guidelines
+        - How to represent information
+        - Identify outstanding issues
+        - Identify assumptions
+        - Validate the direction with others
+        - Think through how you can solve the problem
+        - Estimate the size of the problem
+        - Estimate how much hardware is needed
+        - Determine which groups need to be involved
+        - Understand the concerns of each group
+        - Capture concerns where you might not have a solution
+        - Document your reasons, decisions, alternatives, and issues behind key decisions
+    - Issues, assumptions etc are ok, the key is to bring clarity
+    - Bring clarity through transparency, not just for you but for others
+    - They may have the solution to a particular issue
+    - Transparency typs
+        - Self transparency
+        - Project transparency
+        - Relationship transparency
+            - Giving credit, same message, apologizing, listening, hear before reacting. Goal is to enhance trust
+     - Consistency
+        - what you say and how you say it, email, presentations, documents should all be consistent
+        - avoid the flippant or funny remark you are dying to make
+     - If what you say isn't consistent you'll introduce issues that you will need to deal with in the future
+    - Apologizing demonstrates transparency
+    - Learn to hear before you react
+
+- Passion
+    - Your passion, the source of ideas wanes as the organization moves at a glacial pace
+    - Hard to rekindle passion, need to recognize signs that flame is dimming
+    - Passion and consistency are a good combination
+    - Passion over position, don't take positions you don't care about
+    - Find something that helps you get up in the morning
+    - Rekindling passion - sometimes just getting away for a few days can help
+    - Lack of passion acts as a ceiling to your career
+
+- Context Switching
+    - Department focused to business unit or even cross business unit focused
+    - From technical structure focused to being heavily business focused
+    - Highly focused on a few projects to being more lightly focused on many projects
+    - Being sheltered from management issues to dealing with management issues directly at multiple levels of the organization
+    - Be consciously aware that you're shifting contexts
+    - Be where you are, the art of life is to live in the present moment
+    - Be aware of your weaknesses
+    - You can only do one difficult task at a time
+    - Learn to limit the number of concurrent projects that you oversee at one time, there is a practical constraint
+    - Keep the adrenaline in check, slow down
+    - You need to slow yourself down long enough to ensure that you have enough information to base actions
+    - Carefully consider decisions
+    - Architectural Awareness
+        - Reliability, scalability, availability etc - bring the ilities
+        - Seek proper coupling and cohesion
+            - Adding 'just one more thing' introduces entropy, the cohesion of the component becomes less clear
+            - as you approve these changes you need to keep in mind the context of the purpose
+     - who has the best background to implement functionality, who is going to care if it breaks
+     - who understands the nature of the problem from a domain perspective
+     - who understands the nonfunctional requirements that need to be implemented?
+     - who has a relationship with the customers
+     - Elephant context
+        - Being aware of the elephant in the room, bring awareness of the need to focus on what is not being said, despite the fact that an issue clearly exists and needs to be brought out in the open
