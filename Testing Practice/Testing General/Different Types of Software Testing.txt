@@ -22,3 +22,7 @@ performance testing - evaluate how a system performs under a particular workload
 
 smoke testing - basic tests that check the basic functionality of an application. They are menat to be quick to execute, and their goal is to give you assurance that the major features of your system are working as
 expected
+
+regression testing - is a type of software testing that ensures that new changes to an application don't break existing functionality. Re-running functional and non-functional tests
+
+non-functional tests - evaluates how a software system operates, rather than what it does. It assesses how well a software product performs, it's stability, and how usable it is
