@@ -1,0 +1,24 @@
+Manual vs Automated Testing
+	- Manual testing is expensive and prone to error
+	
+Automated Testing
+	- Much more robust and reliable than manual tests
+	- Key component of continuous integration and continuous delivery
+	
+The different types of tests
+
+unit tests - low level and close to the source of an application. Testing individual methods and functions of classes, componenets, and modules. Cheap to automate and can be run quickly
+
+integration tests - verify that different modules or services used by your application work well together
+
+functional tests - focus on the business requirements of an application. They only verify the output of an action. Integration verifies that system does something, functional testing verifies product requirements
+
+end to end tests - replicates user behavior with the software in a complete application environment. Verifies user flows work as expected. Recommended to rely more on lower level types of testing (unit and integration)
+
+acceptance testing - formal tests that verify if a system satisfies business requirements. Entire application run while testing and focusing on replicating user behaviors. Can also measure performance, and reject changes 
+if certain goals are not met
+
+performance testing - evaluate how a system performs under a particular workload. Help to measure the reliability, speed, scalability and responsiveness of an application
+
+smoke testing - basic tests that check the basic functionality of an application. They are menat to be quick to execute, and their goal is to give you assurance that the major features of your system are working as
+expected
