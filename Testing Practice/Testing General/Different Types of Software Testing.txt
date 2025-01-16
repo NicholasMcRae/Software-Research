@@ -26,3 +26,5 @@ expected
 regression testing - is a type of software testing that ensures that new changes to an application don't break existing functionality. Re-running functional and non-functional tests
 
 non-functional tests - evaluates how a software system operates, rather than what it does. It assesses how well a software product performs, it's stability, and how usable it is
+
+beta testing - conducted at one or more customer sites. Released for a limited number of users for testing in a real-time environment
