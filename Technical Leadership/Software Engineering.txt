@@ -1,0 +1,69 @@
+Answer One
+**********
+
+	Essential
+	*********
+	- Mentor staff at all levels of seniority
+	- Good knowledge of development domain - languages, frameworks, utilities, environments
+	- Version control
+	- Bug killer
+	- How to conduct code reviews
+	- Keep up to date with developments in domain
+	- How to write unit tests
+	- Knowledge of design patterns / when to use them - ??
+	- Knowledge of code smells
+	- Continuous Integration - ??
+	- The ability to plan projects and releases - ??
+
+	Depending on Org
+	****************
+	- Ability to componentize your projects and break it into functional parts
+	- Understanding of security, securing data - ??
+	- Continual Deployment - ??
+	- Design application in a way where future enhancements will be accommodated
+
+	If you're a manager
+	*******************
+	- Interviewing skills and people problems with team members
+	- How to deal with people problems with your team members - ??
+	- Ability to estimate the time for programmers of varying skills
+	- Ability to allocate tasks to correct developers based on their skills and abilities
+
+	Recommended points
+	******************
+	- Learn outside of your development domain
+	- Learn to say no when things aren't possible or out of scope or conflict with restraints
+	- Foster a team environment that is not toxic
+	- Need to stay on top of your stack and learn the latest developments and techniques, as well as broader industry wide trends
+	- Know at least one database platform, now how to do replication, stored procedures, how the query optimiser works, and how to design a schema properly
+	- Requires you to have the ability to communicate effectively. If you're not a confident speaker, look at doing something like Toast Masters
+	- Learn how to make and hold eye contact. Be confident. Dress appropriately for the position. Lead by example.
+
+Answer Two
+**********
+
+1) Higher level view of what's going on and how it's going to work is going to be more crucial here. Best practice design patterns and coding practices
+2) Get better at time management
+	- Take the lead on project architecture and design
+	- Low rent project manager
+3) Prepare yourself to delegate effectively
+4) Hone your communication and interpersonal skills
+5) Lead roles often involve much more management than technical skills
+
+Answer Three
+************
+- How to spec stuff up and give other developers work. Part of your job is to keep the other developers 100% utilised
+- Writing specs that are unambiguous is very important
+- How to build a skeleton/prototype application that everyone else should follow
+- How to foster good team morale
+- How to peer into the future. If a problem is going to happen in 3 months, you want to try to head it off as early as you can
+- Give management solutions, not problems. Tell them what the technical stuff means to them.
+- Learning how to say no. ** - Important
+
+Answer Four
+***********
+- Explaining to managers how a problem is hard to solve
+- Why it can't be solved in a given time line
+- Even how less important it is to solve
+- There is no formal training for this, and you have to learn it by your own
+- Political shit starts hitting you
