@@ -1,0 +1,56 @@
+Facilitating Software Architecture
+
+- An update of the 'advice process'
+
+The Advice Process:
+
+The Advice Process is a decision-making method that distributes authority and relies on seeking input from others before making a final decision. It's a way to involve those affected by a decision and tap into collective wisdom, while still keeping the final decision with one person. 
+Here's a breakdown of the process: 
+
+    Initiate: Someone identifies a problem or opportunity and decides to take action.
+    Seek Input: The initiator gathers perspectives and information from others who might be affected by the decision or have relevant expertise.
+    Propose: The initiator formulates a proposal based on the input received.
+    Seek Advice: The initiator seeks specific advice on their proposal from those affected or with relevant expertise.
+    Consider Advice: The initiator carefully considers the advice received.
+    Decide: The initiator makes the final decision, taking into account the advice they gathered.
+    Inform: The initiator informs those who provided advice about the decision made. 
+
+The Advice Process is built on the principles of distributed authority, collaboration, and respect for individual initiative. It emphasizes listening to different perspectives and building trust in the decision-maker's ability to make the best choice
+
+The Software Architecture Advice Process:
+
+The software architecture advice process, as described by Andrew Harmel-Law<<!, is a framework where anyone can make architectural decisions by seeking advice from two key groups: those affected by the decision and those with relevant expertise. This process emphasizes transparency through documentation (like ADRs) and fosters trust and collective learning within the organization. It moves away from a centralized, autocratic approach to one that encourages participation and decentralized decision-making. 
+Here's a breakdown of the key aspects:
+1. Core Rule: Anyone can make an architectural decision. 
+2. Key Qualifier: Before making a decision, the decision-maker must consult with: 
+
+    Affected parties: Those who will be directly impacted by the decision.
+    Experts: Individuals with relevant knowledge and experience in the decision area. 
+
+3. Transparency and Documentation: 
+
+    Architecture Decision Records (ADRs):
+    These lightweight documents capture the decision, the reasoning behind it, and the advice received.
+    Other methods:
+    While ADRs are a common approach, other methods like RFCs (Request for Comments) can also be used, as long as they provide a written record of the decision-making process. 
+
+4. Role of the Architect: In this process, the architect's role shifts from making all decisions to facilitating conversations, providing guidance, and ensuring the decision-making process is effective. 
+5. Architecture Advisory Forum (AAF): This is a dedicated space (time and place) for discussing architectural decisions and seeking advice. 
+6. Key Principles:
+
+    Decentralized decision-making:
+    Encourages wider participation and avoids the bottleneck of centralized decision-making. 
+
+Speed and efficiency:
+By involving relevant parties early and documenting decisions, the process aims to speed up decision-making cycles. 
+Learning and improvement:
+The advice process promotes a culture of continuous learning by documenting decisions and the rationale behind them. 
+
+7. Gradual Implementation: Harmel-Law suggests a gradual approach to adopting the advice process, rather than a "big bang" transition, according to infoq.com. 
+8. Benefits: 
+
+    Increased trust: Fosters a culture of trust among team members.
+    Collective learning: Encourages knowledge sharing and learning from each other's decisions.
+    Improved alignment: Ensures that decisions are well-informed and aligned with organizational goals.
+
+
