@@ -1,0 +1,14 @@
+Notes
+*****
+- Traditional hierarchical architects present problems when all decisions have to go through them
+	- This slows down the decision making process
+	- More code is sitting unreleased, not providing value
+- There are centralized and decentralized processes, authoritarian and democratic
+	- All have pros and cons
+- The architecture advice process is a best of both worlds
+	- It is decentralized but also fast
+- The architectural advice process:
+	- Decision maker needs to consult the following before they make a decision
+		- Everyone affected by decision
+		- All experts on the decision
+- Having trust is key
