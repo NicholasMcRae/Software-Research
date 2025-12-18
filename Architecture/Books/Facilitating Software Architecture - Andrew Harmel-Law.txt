@@ -12,3 +12,8 @@ Notes
 		- Everyone affected by decision
 		- All experts on the decision
 - Having trust is key
+- delineate between advice and opinion, opinion is the enemy of advice
+
+Rolling out the process
+- from the standpoint of a developer with no deciding power:
+	- allows architects to be everywhere at once, surfacing the key decisions at hand, without losing accountability
