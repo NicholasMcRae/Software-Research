@@ -17,3 +17,6 @@ Notes
 Rolling out the process
 - from the standpoint of a developer with no deciding power:
 	- allows architects to be everywhere at once, surfacing the key decisions at hand, without losing accountability
+- become comfortable seeking advice from people you don't know well or might be uncomfortable with
+- make who is accountable for each decision explicit
+- if selfish deciding is happening under the advice process, it is simply brought out into the open where it can be addressed
