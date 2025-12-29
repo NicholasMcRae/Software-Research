@@ -56,6 +56,37 @@
 		- Coutnerparts in human endeavors
 		- Electricians, plumbers, heating and air conditioning specialists, roofers and framers are each concerned with different structures in a building
 		
+	- Three Kinds of Structures
+		- Architectural structures can be divided into three major categories, depending on the broad nature of the elements they show and reasoning they support
+			- Component-and-Connector
+				- Focus on the way the elements interact with each other at runtime to carry out sysstem functions
+				- Describe how the system is structured as a set of elements that have runtime behavior (components) and interactions (connectors)
+				- Components are the principal units of computation and could be services, peers,c lients, servers, filters, or many other type of runtime element
+				- Connectors are the communication vehicles among components, such as call-return, process synchronization operators, pipes, or others
+				- Help answer questions such as:
+					- What are the major components and how do they interact?
+					- What are the major shared data stores?
+					- Which parts of the system are replicated?
+					- How does data progress through the system?
+					- Which parts of the system can run in parallel?
+					- Can the system's structure change as it executes, and if so, how?
+				- *These structures are criti9cally important for asking questions about the system's runtime properties, such as performance, security, availability, and more
+				- These are the most common but there are two other categories of structures and should not be overlooked
+			- Module Structures
+				- Partition systems into implementation units, which in this book we call modules
+				- Show how a system is structured as a set of code or data units that have to be constructured or procured
+				- Modules are assigned specific computational responsibilities, and are the basis of work assignments for programming teams
+				- In any module structure the elements are modules of some kind (perhaps classes, packages, layers, or merely divisions of functionality, all of which are units of implementation)
+				- Modules represent a static way of considering the system, modules are assigned areas of functional responsibility
+			- Allocation structures
+				- Establish the mapping from software structures to the system's nonsoftware structures, such as its organization or its development, test, and execution environments
+				- Allocation structures answer questions such as:
+					- which processors does each software element execute on?
+					- in which directories or files is each element stored during development, testing, and system building?
+					- What is the assignment of each element to development teams?
+					
+	- Page 10
+		
 	- Page 7
 		
 	
