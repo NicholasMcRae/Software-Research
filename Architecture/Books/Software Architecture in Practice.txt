@@ -1,0 +1,61 @@
+1 - What is Software Architecture
+	- The topic of this book - the design, analysis, and documentation of architectures
+		- Also examine the influences, principally in the form of business goals that lead to quality attribute requirements
+	- We will explore the value that software architecture brings to a development project
+	- Later chapters will take a business and organizational perspective
+	
+	- software architecture - of a system is the set of structures needed to reason about the system. The structures comprise software elements, relations among them, and properties of both
+	- stands in contrast to other definitions that talk about the system's early, major, or important decisions
+	- not all architectural decisions are made early, especially in Agile and spiral-development projects
+	- Structures, by contrast, are fairly easy to identify in software, and they form a powerful tool for system design and analysis
+	- architecture is about reasoning-enabling structures
+	- let's look at the implications
+	
+	- Architecture is a set of software structures
+	- a structure is a set of elements held together by a relation
+	- software systems are composed of many structures, and no single structure is *the* architecture
+	- Architectural structures can be organized into three useful categories, which will play an important role in the design, documentation, and analysis
+		- Component and connector structures
+		- Module Structures
+		- Allocation structures
+	- A structure is architectural if it supports reasoning about the system and the system's properties
+		- The reasoning should be abut an attribute of the system that is important to some stakeholder(s)
+			- Properties such as the functionality achieved by the system, the system's ability to keep operating usefully in the face of fults etc
+			- The ease or difficulty of making specific changes to the system
+		- What is architectural depends on what is useful to reason about in your context for your system
+		
+	- Architecture specifically and intentionally omits certain information about elements that is not useful for easoning about the system
+	- An architecture is foremost an abstraction of a system that selectes certain details and suppresses others
+	- In all modern systems, elements interact with each other by means of interfaces that partition details about an element into public and private parts
+	- Architecture is concerned with the public side of this division, private details are not architectural
+	- We do not want to deal with all of the complexity all of the time
+	
+	- Architecture is design but not all design is architecture. Many design decisions are left unbound by the architecture
+	
+	- Importance of architecture documentation, described in Chapter 22
+	
+	- Not all architectures are good architectures. Raises the importance of architecture design. Treated in Chapter 20
+	
+	- The behavior of each element is part of the architecture insofar as that behavior can help you reason about the system. The behavior of elements embodies how they interact with each other and with the environment
+	- To the extend that an element's behavior influences the acceptability of the system as a whole, this behavior must be considered part of the system's architectural design, and should be documented as such
+	
+	- System architecture - representation of a system in which there is a mapping of functionality onto hardware and software components, a mapping of software architecture onto the hardware architecture, and human interaction
+		- totality of hardware, software, and humans
+		- influence the functionality that is assigned to different processors and the types of networks that connect these processors
+		- there can be constraints placed on the software architecture
+		
+	- Enterprise architecture - description of the structure and behavior of an organization's processes, information flow, personnel, and organizational subunits
+		- Need not include computerized information systems, but these days enterprise architectures are unthinkable without information system support
+		- Enterprise architecture will specify, for exmaple, data model that various systems use to interfact, it will also specify rules for how the enterprise's systems interact with external systems
+		- Software is only one concern with EA, how the software is used by humans to perfoorm business processes and the standards that determine the computational environment are two other common concerns 
+		
+	- Architectural Structures and Views
+		- Structures have counterparts in nature
+		- The neurologist, orthopedist, hematologist and dermatologist all have different views of the various strcutures of a human body
+		- All views are pictured differently and have very different properties, all inherently related and interconnected
+		- Coutnerparts in human endeavors
+		- Electricians, plumbers, heating and air conditioning specialists, roofers and framers are each concerned with different structures in a building
+		
+	- Page 7
+		
+	
