@@ -83,7 +83,7 @@
 				- Allocation structures answer questions such as:
 					- which processors does each software element execute on?
 					- in which directories or files is each element stored during development, testing, and system building
-					- What is the assignment of each element to development teams?
+					- What is the assignment of each element to development teams
 					
 	- Page 10
 		
